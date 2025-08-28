@@ -7,6 +7,7 @@ import { Canvas } from "@react-three/fiber";
 import { Item3 } from "./3d/item3";
 import { Item8 } from "./3d/item8";
 import { Item9 } from "./3d/item9";
+import { useRouter } from "next/navigation";
 
 const ProductContainer = styled.div`
   display: flex;
@@ -62,6 +63,7 @@ export default function ProductCard({
   text: string;
   link: string;
 }) {
+  const router = useRouter();
   const getIcon = () => {
     switch (type) {
       case "analytics":
@@ -87,7 +89,7 @@ export default function ProductCard({
         <div style={{ display: "flex" }}>
           <CircleButton
             onClick={() => {
-              console.log(link);
+              router.push("/search");
             }}
           >
             <FiLink2 size={20} color={MyColors.dark1} />

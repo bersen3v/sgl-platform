@@ -1,8 +1,8 @@
 networks: 
-  - dev
+  dev:
 services:
   nginx: 
-    image: stable-alpine
+    image: nginx:stable-alpine
     ports: 
       - "80:80"
     volumes:

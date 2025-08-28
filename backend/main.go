@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 	eventApi "sgl-rights/api/event"
 	photoApi "sgl-rights/api/photo"
@@ -13,6 +14,7 @@ import (
 )
 
 func main() {
+	fmt.Println("Starting server on :8000...")
 	db.CreateDb()
 
 	mux := http.NewServeMux()
@@ -40,7 +42,7 @@ func main() {
 	corsHandler := cors.Default().Handler(mux)
 
 	http.Handle("/", corsHandler)
-	http.ListenAndServe(":8090", nil)
+	http.ListenAndServe("0.0.0.0:8000", nil)
 }
 
 // func main() {

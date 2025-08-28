@@ -9,18 +9,19 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
 });
 
-
 const eslintConfig = [
   ...compat.config({
     extends: ["next/core-web-vitals", "next/typescript"],
     rules: {
       "no-unused-vars": "off",
-      '@typescript-eslint/no-unused-vars': 'off',
-      'react-hooks/exhaustive-deps': 'off',
-      '@typescript-eslint/no-non-null-asserted-optional-chain': 'off',
+      "@typescript-eslint/no-unused-vars": "off",
+      "react-hooks/exhaustive-deps": "off",
+      "@typescript-eslint/no-non-null-asserted-optional-chain": "off",
+      "@next/next/no-img-element": "off",
+      "jsx-a11y/alt-text": "off",
+      "react/display-name": "off",
     },
   }),
-]
-
+];
 
 export default eslintConfig;

@@ -147,9 +147,13 @@ func SearchEvents(query string, disciplines string, managers string, developers 
 	sqlQuery := fmt.Sprintf("SELECT * FROM Events %s %s;", where, sqlParams)
 
 	rows, _ := db.Query(sqlQuery)
-	defer rows.Close()
 
 	events := []entities.Event{}
+
+	if rows == nil {
+		return events
+	}
+	defer rows.Close()
 
 	for rows.Next() {
 		e := entities.Event{}
@@ -188,30 +192,36 @@ func GetFilters() []byte {
 	rowsManagers, _ := db.Query("SELECT DISTINCT manager FROM Events")
 	rowsDisciplines, _ := db.Query("SELECT DISTINCT discipline FROM Events")
 	rowsDevelopers, _ := db.Query("SELECT DISTINCT developer FROM Events")
-	defer rowsManagers.Close()
-	defer rowsDisciplines.Close()
-	defer rowsDevelopers.Close()
 
 	managers := []string{}
 	disciplines := []string{}
 	developers := []string{}
 
-	for rowsManagers.Next() {
-		var s string
-		rowsManagers.Scan(&s)
-		managers = append(managers, s)
+	if rowsManagers != nil {
+		defer rowsManagers.Close()
+		for rowsManagers.Next() {
+			var s string
+			rowsManagers.Scan(&s)
+			managers = append(managers, s)
+		}
 	}
 
-	for rowsDisciplines.Next() {
-		var s string
-		rowsDisciplines.Scan(&s)
-		disciplines = append(disciplines, s)
+	if rowsDisciplines != nil {
+		defer rowsDisciplines.Close()
+		for rowsDisciplines.Next() {
+			var s string
+			rowsDisciplines.Scan(&s)
+			disciplines = append(disciplines, s)
+		}
 	}
 
-	for rowsDevelopers.Next() {
-		var s string
-		rowsDevelopers.Scan(&s)
-		developers = append(developers, s)
+	if rowsDevelopers != nil {
+		defer rowsDevelopers.Close()
+		for rowsDevelopers.Next() {
+			var s string
+			rowsDevelopers.Scan(&s)
+			developers = append(developers, s)
+		}
 	}
 
 	data := map[string][]string{
