@@ -4,12 +4,13 @@ import (
 	"database/sql"
 	"encoding/json"
 	"fmt"
+	"log"
 	"sgl-rights/entities"
 	"strings"
 )
 
 func AddEvent(e entities.Event) {
-	db, _ := sql.Open("sqlite3", "store.db")
+	db, _ := sql.Open("sqlite3", "/app/store.db")
 	defer db.Close()
 
 	db.Exec(`
@@ -37,7 +38,7 @@ func AddEvent(e entities.Event) {
 }
 
 func UpdateEvent(e entities.Event) {
-	db, _ := sql.Open("sqlite3", "store.db")
+	db, _ := sql.Open("sqlite3", "/app/store.db")
 	defer db.Close()
 
 	_, i := db.Exec(`
@@ -66,7 +67,7 @@ func UpdateEvent(e entities.Event) {
 }
 
 func GetAllEvents() []entities.Event {
-	db, _ := sql.Open("sqlite3", "store.db")
+	db, _ := sql.Open("sqlite3", "/app/store.db")
 	defer db.Close()
 
 	rows, _ := db.Query("SELECT * FROM Events")
@@ -84,7 +85,7 @@ func GetAllEvents() []entities.Event {
 }
 
 func SearchEvents(query string, disciplines string, managers string, developers string, prizeMin int, prizeMax int, startTime int, endTime int) []entities.Event {
-	db, _ := sql.Open("sqlite3", "store.db")
+	db, _ := sql.Open("sqlite3", "/app/store.db")
 	defer db.Close()
 
 	fmt.Println(disciplines)
@@ -165,7 +166,7 @@ func SearchEvents(query string, disciplines string, managers string, developers 
 }
 
 func GetEventById(id int) entities.Event {
-	db, _ := sql.Open("sqlite3", "store.db")
+	db, _ := sql.Open("sqlite3", "/app/store.db")
 	defer db.Close()
 
 	row := db.QueryRow("SELECT * FROM Events WHERE id = $1", id)
@@ -177,60 +178,202 @@ func GetEventById(id int) entities.Event {
 }
 
 func RemoveEvent(id int) {
-	db, _ := sql.Open("sqlite3", "store.db")
+	db, _ := sql.Open("sqlite3", "/app/store.db")
 
 	defer db.Close()
 
 	db.Exec("DELETE FROM Events WHERE id = $1", id)
 }
 
+// func GetFilters() []byte {
+
+// 	db, _ := sql.Open("sqlite3", "/app/store.db")
+// 	defer db.Close()
+
+// 	rowsManagers, _ := db.Query("SELECT DISTINCT manager FROM Events")
+// 	rowsDisciplines, _ := db.Query("SELECT DISTINCT discipline FROM Events")
+// 	rowsDevelopers, _ := db.Query("SELECT DISTINCT developer FROM Events")
+
+// 	managers := []string{}
+// 	disciplines := []string{}
+// 	developers := []string{}
+
+// 	if rowsManagers != nil {
+// 		defer rowsManagers.Close()
+// 		for rowsManagers.Next() {
+// 			var s string
+// 			rowsManagers.Scan(&s)
+// 			managers = append(managers, s)
+// 		}
+// 	}
+
+// 	if rowsDisciplines != nil {
+// 		defer rowsDisciplines.Close()
+// 		for rowsDisciplines.Next() {
+// 			var s string
+// 			rowsDisciplines.Scan(&s)
+// 			disciplines = append(disciplines, s)
+// 		}
+// 	}
+
+// 	if rowsDevelopers != nil {
+// 		defer rowsDevelopers.Close()
+// 		for rowsDevelopers.Next() {
+// 			var s string
+// 			rowsDevelopers.Scan(&s)
+// 			developers = append(developers, s)
+// 		}
+// 	}
+
+// 	data := map[string][]string{
+// 		"managers":    managers,
+// 		"disciplines": disciplines,
+// 		"developers":  developers,
+// 	}
+
+// 	fmt.Println(data)
+// 	fmt.Println(rowsManagers)
+// 	fmt.Println(rowsDisciplines)
+
+// 	jsonData, _ := json.Marshal(data)
+
+//		return jsonData
+//	}
 func GetFilters() []byte {
-
-	db, _ := sql.Open("sqlite3", "store.db")
-	defer db.Close()
-
-	rowsManagers, _ := db.Query("SELECT DISTINCT manager FROM Events")
-	rowsDisciplines, _ := db.Query("SELECT DISTINCT discipline FROM Events")
-	rowsDevelopers, _ := db.Query("SELECT DISTINCT developer FROM Events")
-
-	managers := []string{}
-	disciplines := []string{}
-	developers := []string{}
-
-	if rowsManagers != nil {
-		defer rowsManagers.Close()
-		for rowsManagers.Next() {
-			var s string
-			rowsManagers.Scan(&s)
-			managers = append(managers, s)
+	// Открываем соединение с базой данных
+	db, err := sql.Open("sqlite3", "/app/store.db")
+	if err != nil {
+		log.Printf("ERROR: Failed to open database: %v", err)
+		return getEmptyFiltersJson()
+	}
+	defer func() {
+		if closeErr := db.Close(); closeErr != nil {
+			log.Printf("WARNING: Failed to close database connection: %v", closeErr)
 		}
+	}()
+
+	// Проверяем соединение с базой
+	if err := db.Ping(); err != nil {
+		log.Printf("ERROR: Database connection failed: %v", err)
+		return getEmptyFiltersJson()
 	}
 
-	if rowsDisciplines != nil {
-		defer rowsDisciplines.Close()
-		for rowsDisciplines.Next() {
-			var s string
-			rowsDisciplines.Scan(&s)
-			disciplines = append(disciplines, s)
-		}
+	// Получаем уникальных менеджеров
+	managers, err := getDistinctValues(db, "SELECT DISTINCT manager FROM Events WHERE manager IS NOT NULL AND manager != ''")
+	if err != nil {
+		log.Printf("ERROR: Failed to get managers: %v", err)
+		managers = []string{}
 	}
 
-	if rowsDevelopers != nil {
-		defer rowsDevelopers.Close()
-		for rowsDevelopers.Next() {
-			var s string
-			rowsDevelopers.Scan(&s)
-			developers = append(developers, s)
-		}
+	// Получаем уникальные дисциплины
+	disciplines, err := getDistinctValues(db, "SELECT DISTINCT discipline FROM Events WHERE discipline IS NOT NULL AND discipline != ''")
+	if err != nil {
+		log.Printf("ERROR: Failed to get disciplines: %v", err)
+		disciplines = []string{}
 	}
 
+	// Получаем уникальных разработчиков
+	developers, err := getDistinctValues(db, "SELECT DISTINCT developer FROM Events WHERE developer IS NOT NULL AND developer != ''")
+	if err != nil {
+		log.Printf("ERROR: Failed to get developers: %v", err)
+		developers = []string{}
+	}
+
+	// Создаем структуру данных
 	data := map[string][]string{
 		"managers":    managers,
 		"disciplines": disciplines,
 		"developers":  developers,
 	}
 
-	jsonData, _ := json.Marshal(data)
+	// Логируем результаты для отладки
+	log.Printf("DEBUG: Filters data - managers: %d, disciplines: %d, developers: %d",
+		len(managers), len(disciplines), len(developers))
+
+	// Преобразуем в JSON
+	jsonData, err := json.Marshal(data)
+	if err != nil {
+		log.Printf("ERROR: Failed to marshal JSON: %v", err)
+		return getEmptyFiltersJson()
+	}
 
 	return jsonData
+}
+
+// Вспомогательная функция для получения уникальных значений
+func getDistinctValues(db *sql.DB, query string) ([]string, error) {
+	var values []string
+
+	rows, err := db.Query(query)
+	if err != nil {
+		return nil, fmt.Errorf("query failed: %v, query: %s", err, query)
+	}
+	defer func() {
+		if closeErr := rows.Close(); closeErr != nil {
+			log.Printf("WARNING: Failed to close rows: %v", closeErr)
+		}
+	}()
+
+	for rows.Next() {
+		var value string
+		if err := rows.Scan(&value); err != nil {
+			log.Printf("WARNING: Failed to scan row: %v", err)
+			continue // Пропускаем проблемные строки, но продолжаем обработку
+		}
+		if value != "" { // Добавляем только непустые значения
+			values = append(values, value)
+		}
+	}
+
+	// Проверяем ошибки итерации
+	if err := rows.Err(); err != nil {
+		return nil, fmt.Errorf("row iteration error: %v", err)
+	}
+
+	return values, nil
+}
+
+// Функция возвращает пустой JSON при ошибках
+func getEmptyFiltersJson() []byte {
+	emptyData := map[string][]string{
+		"managers":    {},
+		"disciplines": {},
+		"developers":  {},
+	}
+
+	jsonData, err := json.Marshal(emptyData)
+	if err != nil {
+		// В крайнем случае возвращаем жестко закодированный JSON
+		return []byte(`{"managers":[],"disciplines":[],"developers":[]}`)
+	}
+
+	return jsonData
+}
+
+// Дополнительная функция для проверки состояния базы (можно вызвать при инициализации)
+func CheckDatabaseState() {
+	db, err := sql.Open("sqlite3", "/app/store.db")
+	if err != nil {
+		log.Printf("DATABASE CHECK: Failed to open database: %v", err)
+		return
+	}
+	defer db.Close()
+
+	// Проверяем существование таблицы
+	var tableName string
+	err = db.QueryRow("SELECT name FROM sqlite_master WHERE type='table' AND name='Events'").Scan(&tableName)
+	if err != nil {
+		log.Printf("DATABASE CHECK: Events table does not exist or is empty: %v", err)
+		return
+	}
+
+	// Проверяем количество записей
+	var count int
+	err = db.QueryRow("SELECT COUNT(*) FROM Events").Scan(&count)
+	if err != nil {
+		log.Printf("DATABASE CHECK: Failed to count events: %v", err)
+		return
+	}
+
+	log.Printf("DATABASE CHECK: Events table exists with %d records", count)
 }

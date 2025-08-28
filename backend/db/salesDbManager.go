@@ -6,7 +6,7 @@ import (
 )
 
 func GetAllSales() []entities.Sale {
-	db, _ := sql.Open("sqlite3", "store.db")
+	db, _ := sql.Open("sqlite3", "/app/store.db")
 	defer db.Close()
 
 	rows, _ := db.Query(`

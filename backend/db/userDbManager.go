@@ -7,7 +7,7 @@ import (
 )
 
 func AddUser(u entities.User) {
-	db, _ := sql.Open("sqlite3", "store.db")
+	db, _ := sql.Open("sqlite3", "/app/store.db")
 	defer db.Close()
 
 	db.Exec(`
@@ -17,7 +17,7 @@ func AddUser(u entities.User) {
 }
 
 func GetAllUsers() []entities.User {
-	db, _ := sql.Open("sqlite3", "store.db")
+	db, _ := sql.Open("sqlite3", "/app/store.db")
 	defer db.Close()
 
 	rows, _ := db.Query("SELECT * FROM Users")
@@ -35,7 +35,7 @@ func GetAllUsers() []entities.User {
 }
 
 func GetUserById(id int) entities.User {
-	db, _ := sql.Open("sqlite3", "store.db")
+	db, _ := sql.Open("sqlite3", "/app/store.db")
 	defer db.Close()
 
 	row := db.QueryRow("SELECT * FROM Users WHERE id = $1", id)
@@ -47,7 +47,7 @@ func GetUserById(id int) entities.User {
 }
 
 func UpdateUser(e entities.User) {
-	db, _ := sql.Open("sqlite3", "store.db")
+	db, _ := sql.Open("sqlite3", "/app/store.db")
 	defer db.Close()
 
 	_, i := db.Exec(`
@@ -69,7 +69,7 @@ func UpdateUser(e entities.User) {
 }
 
 func RemoveUser(id int) {
-	db, _ := sql.Open("sqlite3", "store.db")
+	db, _ := sql.Open("sqlite3", "/app/store.db")
 
 	defer db.Close()
 
@@ -77,7 +77,7 @@ func RemoveUser(id int) {
 }
 
 func AuthUser(login string, password string) entities.User {
-	db, _ := sql.Open("sqlite3", "store.db")
+	db, _ := sql.Open("sqlite3", "/app/store.db")
 	defer db.Close()
 
 	row := db.QueryRow("SELECT * FROM Users WHERE login = $1 AND password = $2", login, password)
@@ -89,7 +89,7 @@ func AuthUser(login string, password string) entities.User {
 }
 
 func AddEventToUser(userId int, eventId int, time int) {
-	db, _ := sql.Open("sqlite3", "store.db")
+	db, _ := sql.Open("sqlite3", "/app/store.db")
 	defer db.Close()
 
 	db.Exec(`
@@ -99,7 +99,7 @@ func AddEventToUser(userId int, eventId int, time int) {
 }
 
 func RemoveEventFromUser(userId int, eventId int) {
-	db, _ := sql.Open("sqlite3", "store.db")
+	db, _ := sql.Open("sqlite3", "/app/store.db")
 	defer db.Close()
 
 	db.Exec(`
@@ -109,7 +109,7 @@ func RemoveEventFromUser(userId int, eventId int) {
 }
 
 func GetUserEvents(userId int) []entities.Event {
-	db, _ := sql.Open("sqlite3", "store.db")
+	db, _ := sql.Open("sqlite3", "/app/store.db")
 	defer db.Close()
 
 	rows, _ := db.Query(`

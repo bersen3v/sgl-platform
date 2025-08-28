@@ -7,7 +7,7 @@ import (
 )
 
 func CreateDb() {
-	db, _ := sql.Open("sqlite3", "store.db")
+	db, _ := sql.Open("sqlite3", "/app/store.db")
 	defer db.Close()
 
 	db.Exec(`

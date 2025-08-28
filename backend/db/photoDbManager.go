@@ -15,7 +15,7 @@ func SavePhoto(handler *multipart.FileHeader, file multipart.File) string {
 	format := splittedName[len(splittedName)-1]
 	uniqueFileName := uuid.New().String()
 
-	f, _ := os.OpenFile("static/"+uniqueFileName+"."+format, os.O_WRONLY|os.O_CREATE, 0666)
+	f, _ := os.OpenFile("/app/static/"+uniqueFileName+"."+format, os.O_WRONLY|os.O_CREATE, 0666)
 	defer f.Close()
 
 	io.Copy(f, file)
