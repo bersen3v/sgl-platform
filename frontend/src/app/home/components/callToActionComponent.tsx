@@ -6,6 +6,7 @@ import { gsap } from "gsap";
 import { SplitText } from "gsap/dist/SplitText";
 import GradientBubbles from "../components/bubbles";
 import { MyColors } from "@/shared/styles";
+import { scrollToSection } from "@/shared/tools/scrollToSection";
 
 const FirstBlockContainer = styled.div`
   display: flex;
@@ -46,7 +47,10 @@ export default function CallToActionComponent({
         <ContentWrapper>
           <TextStyle.Header>{header}</TextStyle.Header>
           <TextStyle.Header2>{text}</TextStyle.Header2>
-          <CustomBlackButton placeholder={"связаться"}></CustomBlackButton>
+          <CustomBlackButton
+            placeholder={"связаться"}
+            onClick={() => scrollToSection({ id: "footer" })}
+          ></CustomBlackButton>
         </ContentWrapper>
       </FirstBlockContainer>
     </>

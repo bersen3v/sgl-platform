@@ -24,12 +24,14 @@ const CustomButtonStyle = styled.button`
 
 export default function CustomBlackButton({
   placeholder,
+  onClick,
 }: {
   placeholder: string;
+  onClick: () => void;
 }) {
   return (
     <CustomButtonStyle>
-      <TextStyle.Button>{placeholder}</TextStyle.Button>
+      <TextStyle.Button onClick={onClick}>{placeholder}</TextStyle.Button>
     </CustomButtonStyle>
   );
 }

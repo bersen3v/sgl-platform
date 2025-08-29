@@ -7,6 +7,7 @@ import { gsap } from "gsap";
 import { SplitText } from "gsap/dist/SplitText";
 import GradientBubbles from "../components/bubbles";
 import { useIntl } from "react-intl";
+import { scrollToSection } from "@/shared/tools/scrollToSection";
 
 const FirstBlockContainer = styled.div`
   display: flex;
@@ -81,7 +82,10 @@ export default function HeaderBlock() {
           <TextStyle.Header2 ref={paragraphRef}>
             {intl.formatMessage({ id: "block1description" })}
           </TextStyle.Header2>
-          <CustomBlackButton placeholder={"связаться"}></CustomBlackButton>
+          <CustomBlackButton
+            placeholder={"связаться"}
+            onClick={() => scrollToSection({ id: "footer" })}
+          ></CustomBlackButton>
         </ContentWrapper>
       </FirstBlockContainer>
     </>

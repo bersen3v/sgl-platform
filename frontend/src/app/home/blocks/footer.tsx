@@ -30,7 +30,7 @@ const FooterHalfPartRight = styled.div`
 export default function Footer() {
   const intl = useIntl();
   return (
-    <BlockContainer>
+    <BlockContainer id="footer">
       <FooterHalfPart>
         <img
           onClick={() => {
