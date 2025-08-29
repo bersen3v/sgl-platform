@@ -8,8 +8,8 @@ export interface LocaleContextType {
 
 export const LocaleContext = createContext<LocaleContextType>({
   currentLocale: LOCALES.ENGLISH,
-  setCurrentLocale(locale) {
-    () => {};
+  setCurrentLocale: () => {
+    console.log("hello");
   },
 });
 
