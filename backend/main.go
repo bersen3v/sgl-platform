@@ -39,7 +39,14 @@ func main() {
 	mux.HandleFunc("/getUserEvents", userApi.GetUserEvents)
 	mux.HandleFunc("/getAllSales", saleApi.GetAllSales)
 
-	corsHandler := cors.Default().Handler(mux)
+	c := cors.New(cors.Options{
+		AllowedOrigins:   []string{"*"}, // Разрешить все origins
+		AllowedMethods:   []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
+		AllowedHeaders:   []string{"*"},
+		AllowCredentials: true,
+	})
+
+	corsHandler := c.Handler(mux)
 
 	http.Handle("/", corsHandler)
 	http.ListenAndServe("0.0.0.0:8000", nil)

@@ -1,5 +1,6 @@
 import { desktopMinWidth } from "@/shared/constants/adaptive";
 import { styled } from "styled-components";
+import { MyColors } from "../MyColors/MyColors";
 
 const Header = styled.h1`
   font-family: "helvetica";
@@ -91,6 +92,14 @@ const Button = styled.h3`
   font-weight: 500;
 `;
 
+const FooterText = styled.h3`
+  font-family: "helvetica";
+  font-size: 1.5em;
+  text-align: center;
+  font-weight: 500;
+  color: ${MyColors.green};
+`;
+
 const HeaderMenuText = styled.h3`
   font-family: "helvetica";
   font-size: 1em;
@@ -115,4 +124,5 @@ export const TextStyle = {
   HeaderLeft,
   ProductHeader,
   ProductText,
+  FooterText,
 };

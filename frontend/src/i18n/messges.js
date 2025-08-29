@@ -60,6 +60,41 @@ export const messages = {
       "Leave your contact details and a manager will contact you shortly",
     comproposal_success_title: "Request sent successfully",
     comproposal_success_description: "A manager will contact you soon",
+
+    // newmain
+    block1header: "organization and digital support of esports tournaments",
+    block1description:
+      "we sell rights for esports events and provide full streaming support",
+    block1button: "contact us",
+    block2first: "For companies that want to develop ahead of time and trends",
+    block2second:
+      "We turn raw video streams into broadcasts ready for user consumption",
+    block2third:
+      "We conduct real-time event analytics using machine vision solutions",
+
+    products: "products",
+    analytics: "Analytics",
+    analyticsDescription:
+      "smart real-time video stream analytics trained for specific esports disciplines",
+    marketplace: "Marketplace",
+    marketplaceDescription:
+      "a platform for convenient buying and selling of rights for major esports events",
+    walkingDescription:
+      "full cycle of esports event creation – from event organization to video stream processing",
+    walking: "Support",
+    arsentev: "Roman Arsentev",
+    shukanov: "Artur Shukanov",
+    prmanager: "PR Manager",
+    developer: "Developer",
+    founder: "Founder",
+    prBlockHeader: "we organize and support esports events",
+    prBlockDescription:
+      "we sell rights for esports events and provide full streaming support",
+
+    too: "SGL COMPANY",
+
+    main: "main",
+    about: "about",
   },
   [LOCALES.RUSSIAN]: {
     //home
@@ -121,6 +156,42 @@ export const messages = {
       "Оставьте свои контакты и в ближайшее время с вами свяжется менеджер",
     comproposal_success_title: "Заявка успешно отправлена",
     comproposal_success_description: "Скоро с вами свяжется менеджер",
+
+    // newmain
+    block1header:
+      "организация и digital-сопровождение киберспортивных турниров",
+    block1description:
+      "продаём права на киберспортивные события и обеспечиваем полную поддержку трансляций",
+    block1button: "связаться",
+    block2first:
+      "Для компаний, которые хотят развиваться, опережая время и тренды",
+    block2second:
+      "Превращаем голый видеопоток в трансляцию, готовую к употреблению пользователем",
+    block2third:
+      "В реальном времени проводим аналитику события с помощью решений на основе машинного зрения",
+
+    products: "продукты",
+    analytics: "Аналитика",
+    analyticsDescription:
+      "умная realtime аналитика видеопотока, обученная под отдельные киберспортивные дисциплины",
+    marketplace: "Маркетплейс",
+    marketplaceDescription:
+      "площадка для удобной продажи и покупки прав на крупнейшие киберспортивные события",
+    walkingDescription:
+      "полный цикл создания киберспортивного мероприятия - от организации события до работы над видеопотоком",
+    walking: "Сопровождение",
+    arsentev: "Роман Арсентьев",
+    shukanov: "Артур Шуканов",
+    prmanager: "PR-менеджер",
+    developer: "Разработчик",
+    founder: "Фаундер",
+    prBlockHeader: "организуем и сопровождаем киберспортивные события",
+    prBlockDescription:
+      "продаём права на киберспортивные события и обеспечиваем полную поддержку трансляций",
+    too: 'ТОО "СГЛ"',
+
+    main: "главная",
+    about: "о нас",
   },
   [LOCALES.KAZAKH]: {
     //home
@@ -181,5 +252,39 @@ export const messages = {
       "Байланыс мәліметтеріңізді қалдырыңыз, менеджер жақын арада хабарласады",
     comproposal_success_title: "Өтінім сәтті жіберілді",
     comproposal_success_description: "Менеджер сізбен жақын арада хабарласады",
+
+    // newmain
+    block1header:
+      "кәсіпорындар мен цифрлық қолдау көрсету киберспорт турнирлерінің ұйымдастырылуы",
+    block1description:
+      "киберспорттық оқиғаларға құқықтарды сатамыз және толық трансляцияларды қамтамасыз етеміз",
+    block1button: "байланысу",
+    block2first: "Уақыт пен трендтерден алда дамығысы келетін компанияларға",
+    block2second:
+      "қарапайым видеожазбаны қолданушыға ыңғайлы дайын трансляцияға айналдырамыз",
+    block2third:
+      "оқиғаны нақты уақыт режимінде машиналық көру шешімдері арқылы аналитикалық өңдейміз",
+
+    products: "өнімдер",
+    analytics: "Аналитика",
+    analyticsDescription:
+      "арнайы киберспорт дисциплиналарына бейімделген ақылды нақты уақыттағы видеожазба аналитикасы",
+    marketplace: "Маркетплейс",
+    marketplaceDescription:
+      "ең ірі киберспорттық оқиғаларға құқықтарды сатып алу және сату үшін платформа",
+    walkingDescription:
+      "киберспорттық іс-шараны толық циклмен ұйымдастыру – оқиғаны ұйымдастырудан видеожазбаны өңдеуге дейін",
+    walking: "Қолдау",
+    arsentev: "Роман Арсентьев",
+    shukanov: "Артур Шуканов",
+    prmanager: "PR менеджері",
+    developer: "Әзірлеуші",
+    founder: "Құрылған адам",
+    prBlockHeader: "киберспорттық оқиғаларды ұйымдастырамыз және қолдаймыз",
+    prBlockDescription:
+      "киберспорттық оқиғаларға құқықтарды сатамыз және толық трансляцияларды қамтамасыз етеміз",
+    too: 'ТОО "СГЛ"',
+    main: "негізгі",
+    about: "туралы",
   },
 };

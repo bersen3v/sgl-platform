@@ -1,18 +1,14 @@
 import { LOCALES } from "@/i18n/locales";
+import { useLocale } from "@/shared/context/localeContext";
 import { MyBordersRadius, MyColors, MySpacing } from "@/shared/styles";
 import { MyTypography } from "@/shared/styles/MyTypography/MyTypography";
 import { ChangeEvent } from "react";
 
-export default function LanguageSelect({
-  locale,
-  setLocale,
-}: {
-  locale: string;
-  setLocale: (text: string) => void;
-}) {
+export default function LanguageSelect() {
+  const { currentLocale, setCurrentLocale } = useLocale();
   const handleSelectChange = (event: ChangeEvent<HTMLSelectElement>) => {
     const selectedValue = event.target.value;
-    setLocale(selectedValue);
+    setCurrentLocale(selectedValue);
   };
 
   return (
@@ -33,7 +29,7 @@ export default function LanguageSelect({
           ...MyTypography.Helvetica14Medium,
           color: MyColors.grey,
         }}
-        value={locale}
+        value={currentLocale}
         onChange={(event: ChangeEvent<HTMLSelectElement>) => {
           handleSelectChange(event);
         }}

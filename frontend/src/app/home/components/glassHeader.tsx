@@ -1,5 +1,8 @@
+import { desktopMinWidth } from "@/shared/constants/adaptive";
 import { MyColors } from "@/shared/styles";
 import { TextStyle } from "@/shared/styles/MyTypography/textStyles";
+import LanguageSelect from "@/shared/widgets/customHeader/components/languageSelect";
+import { useIntl } from "react-intl";
 import { styled } from "styled-components";
 
 const HeaderMenuLayout = styled.div`
@@ -57,7 +60,19 @@ const HeaderMenu = styled.div`
   }
 `;
 
+const HeaderButtons = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+
+  @media (max-width: ${desktopMinWidth}px) {
+    display: none;
+  }
+`;
+
 export default function GlassHeader() {
+  const intl = useIntl();
   return (
     <HeaderMenuLayout>
       <HeaderMenu>
@@ -69,10 +84,28 @@ export default function GlassHeader() {
             objectFit: "cover",
           }}
         ></img>
-        <TextStyle.HeaderMenuText>главная</TextStyle.HeaderMenuText>
-        <TextStyle.HeaderMenuText>продукты</TextStyle.HeaderMenuText>
-        <TextStyle.HeaderMenuText>о нас</TextStyle.HeaderMenuText>
+        <HeaderButtons>
+          <TextStyle.HeaderMenuText>
+            {intl.formatMessage({ id: "main" })}
+          </TextStyle.HeaderMenuText>
+          <TextStyle.HeaderMenuText>
+            {intl.formatMessage({ id: "products" })}
+          </TextStyle.HeaderMenuText>
+          <TextStyle.HeaderMenuText>
+            {intl.formatMessage({ id: "about" })}
+          </TextStyle.HeaderMenuText>
+        </HeaderButtons>
       </HeaderMenu>
+      <div
+        style={{
+          position: "fixed",
+          top: 0,
+          right: 0,
+          margin: "1.5em",
+        }}
+      >
+        <LanguageSelect></LanguageSelect>
+      </div>
     </HeaderMenuLayout>
   );
 }

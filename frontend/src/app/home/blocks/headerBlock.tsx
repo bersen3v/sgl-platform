@@ -6,6 +6,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { SplitText } from "gsap/dist/SplitText";
 import GradientBubbles from "../components/bubbles";
+import { useIntl } from "react-intl";
 
 const FirstBlockContainer = styled.div`
   display: flex;
@@ -34,6 +35,7 @@ const ContentWrapper = styled.div`
 export default function HeaderBlock() {
   const headingRef = useRef(null);
   const paragraphRef = useRef(null);
+  const intl = useIntl();
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -74,11 +76,10 @@ export default function HeaderBlock() {
         <GradientBubbles></GradientBubbles>
         <ContentWrapper>
           <TextStyle.Header ref={headingRef}>
-            организация и digital-сопровождение киберспортивных турниров
+            {intl.formatMessage({ id: "block1header" })}
           </TextStyle.Header>
           <TextStyle.Header2 ref={paragraphRef}>
-            продаём права на киберспортивные события и обеспечиваем полную
-            поддержку трансляций
+            {intl.formatMessage({ id: "block1description" })}
           </TextStyle.Header2>
           <CustomBlackButton placeholder={"связаться"}></CustomBlackButton>
         </ContentWrapper>

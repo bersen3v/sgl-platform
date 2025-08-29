@@ -50,6 +50,11 @@ export default function RootLayout({
   const defaultLocale = LOCALES.ENGLISH;
   const [currentLocale, setCurrentLocale] = useState(defaultLocale);
 
+  const localeContextValue = {
+    currentLocale,
+    setCurrentLocale,
+  };
+
   return (
     <html lang="en" style={{ height: "100%", scrollbarWidth: "none" }}>
       <body
@@ -60,16 +65,13 @@ export default function RootLayout({
           height: "100%",
         }}
       >
-        <LocaleContext.Provider value={currentLocale}>
+        <LocaleContext.Provider value={localeContextValue}>
           <I18nWrapper
             locale={defaultLocale}
             messages={messages[currentLocale]}
           >
             <Toaster position="top-right" richColors></Toaster>
-            <CustomHeader
-              locale={currentLocale}
-              setLocale={setCurrentLocale}
-            ></CustomHeader>
+            <CustomHeader></CustomHeader>
             <main style={{ flex: 1 }}>{children}</main>
           </I18nWrapper>
         </LocaleContext.Provider>

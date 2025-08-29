@@ -3,6 +3,7 @@ import { TextStyle } from "@/shared/styles/MyTypography/textStyles";
 import { MyColors } from "@/shared/styles";
 import { desktopMinWidth } from "@/shared/constants/adaptive";
 import VideoPreview from "../components/videoPreview";
+import { useIntl } from "react-intl";
 
 const BlockContainer = styled.div`
   position: relative;
@@ -43,21 +44,20 @@ const AnimationContainer = styled.div`
 `;
 
 export default function MotivationBlock() {
+  const intl = useIntl();
   return (
     <BlockContainer>
       <TextContainer>
         <TextStyle.ProductHeader>
-          Для компаний, которые хотят развиваться, опережая время и тренды
+          {intl.formatMessage({ id: "block2first" })}
         </TextStyle.ProductHeader>
 
         <TextStyle.Header2Left>
-          Превращаем голый видеопоток в трансляцию, готовую к употреблению
-          пользователем
+          {intl.formatMessage({ id: "block2second" })}
         </TextStyle.Header2Left>
 
         <TextStyle.Header2Left>
-          В реальном времени проводим аналитику события с помощью решений на
-          основе машинного зрения
+          {intl.formatMessage({ id: "block2third" })}
         </TextStyle.Header2Left>
       </TextContainer>
 

@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import CallToActionComponent from "../components/callToActionComponent";
+import { useIntl } from "react-intl";
 
 const BlockContainer = styled.div`
   display: flex;
@@ -10,11 +11,12 @@ const BlockContainer = styled.div`
 `;
 
 export default function CallToActionBlock() {
+  const intl = useIntl();
   return (
     <BlockContainer>
       <CallToActionComponent
-        header={"хедер"}
-        text={"текст"}
+        header={intl.formatMessage({ id: "prBlockHeader" })}
+        text={intl.formatMessage({ id: "prBlockDescription" })}
       ></CallToActionComponent>
     </BlockContainer>
   );

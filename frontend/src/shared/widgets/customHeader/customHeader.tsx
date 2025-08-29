@@ -2,25 +2,25 @@ import { MySpacing } from "@/shared/styles";
 
 import ProfileButton from "./components/profileButton";
 import LanguageSelect from "./components/languageSelect";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { useEffect, useLayoutEffect, useState } from "react";
+import { useLocale } from "@/shared/context/localeContext";
 
 const blockedPages = ["/"];
 
-export default function CustomHeader({
-  locale,
-  setLocale,
-}: {
-  locale: string;
-  setLocale: (text: string) => void;
-}) {
+export default function CustomHeader() {
   const router = useRouter();
 
-  const path = typeof window !== "undefined" ? window.location.pathname : "/";
+  const path = usePathname();
+
+  useEffect(() => {
+    console.log(path);
+  }, [path]);
 
   if (blockedPages.includes(path)) {
     return null;
   }
-
+  // console.log(path);
   return (
     <div
       style={{
@@ -46,7 +46,7 @@ export default function CustomHeader({
       ></img>
 
       <div style={{ display: "flex", gap: MySpacing.s10, height: "100%" }}>
-        <LanguageSelect locale={locale} setLocale={setLocale}></LanguageSelect>
+        <LanguageSelect></LanguageSelect>
         <ProfileButton></ProfileButton>
       </div>
     </div>

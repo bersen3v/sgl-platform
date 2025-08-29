@@ -1,6 +1,7 @@
 import { TextStyle } from "@/shared/styles/MyTypography/textStyles";
 import { styled } from "styled-components";
 import PlayerCard from "../components/playerCard";
+import { useIntl } from "react-intl";
 
 const BlockContainer = styled.div`
   display: flex;
@@ -32,6 +33,7 @@ const PlayersLayout = styled.div`
 `;
 
 export default function TeamBlock() {
+  const intl = useIntl();
   return (
     <>
       <TextStyle.ProductHeader
@@ -43,25 +45,30 @@ export default function TeamBlock() {
           paddingBottom: 0,
         }}
       >
-        Команда
+        {intl.formatMessage({ id: "team" })}
       </TextStyle.ProductHeader>
       <BlockContainer>
         <PlayersScroll>
           <PlayersLayout>
             <PlayerCard
               img={"icons/dmitri_pislevich.jpg"}
-              name={"Дмитрий Пислевич"}
-              position={"CEO"}
+              name={intl.formatMessage({ id: "dmitry_pislevich" })}
+              position={intl.formatMessage({ id: "founder" })}
             ></PlayerCard>
             <PlayerCard
-              img={"icons/dmitri_pislevich.jpg"}
-              name={"Магжан Мязов"}
-              position={"CEO"}
+              img={"icons/magzhan.jpg"}
+              name={intl.formatMessage({ id: "magzhan_myazov" })}
+              position={intl.formatMessage({ id: "ceo" })}
             ></PlayerCard>
             <PlayerCard
-              img={"icons/dmitri_pislevich.jpg"}
-              name={"Магжан Мязов"}
-              position={"CEO"}
+              img={"icons/arsentev.jpg"}
+              name={intl.formatMessage({ id: "arsentev" })}
+              position={intl.formatMessage({ id: "developer" })}
+            ></PlayerCard>
+            <PlayerCard
+              img={"icons/shukanov.jpg"}
+              name={intl.formatMessage({ id: "shukanov" })}
+              position={intl.formatMessage({ id: "prmanager" })}
             ></PlayerCard>
           </PlayersLayout>
         </PlayersScroll>

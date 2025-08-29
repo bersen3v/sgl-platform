@@ -8,6 +8,9 @@ export default function useCurrentLocale() {
   const currentLocale = useContext(LocaleContext);
 
   return {
-    currentLocale: currentLocale.split("-")[0] as "en" | "kk" | "ru",
+    currentLocale: currentLocale.currentLocale.split("-")[0] as
+      | "en"
+      | "kk"
+      | "ru",
   };
 }
