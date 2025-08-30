@@ -1,5 +1,8 @@
+
+
 networks: 
   dev:
+
 services:
   nginx: 
     image: nginx:stable-alpine
@@ -15,6 +18,7 @@ services:
       - frontend
     networks:
       - dev
+    restart: unless-stopped
 
   backend: 
     build: 
@@ -35,4 +39,5 @@ services:
     volumes:
       - ./certbot/www:/var/www/certbot
       - ./certbot/conf:/etc/letsencrypt
-    command: certonly --webroot -w /var/www/certbot --force-renewal --email bersenev4dev@gmail.com -d www.sglone.kz --agree-tos
+    command: certonly --webroot -w /var/www/certbot --email bersenev4dev@gmail.com -d www.sglone.kz --agree-tos --non-interactive --keep-until-expiring
+    restart: unless-stopped
