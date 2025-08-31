@@ -58,37 +58,30 @@ export default function PartnersBlock() {
           <PlayersLayout>
             <PartnerCard
               img={
-                "https://avatars.mds.yandex.net/i?id=aa950cdb0955ff88059bdd793ca94d23_sr-5829296-images-thumbs&n=13"
+                "https://mayak1932.kz/wp-content/uploads/2022/11/whatsapp-image-2022-11-16-at-09.18.07-1-1024x1024.jpeg"
               }
-              name={"HellTv"}
+              name={"AstanaHub"}
               position={"Крупнейший в мире поставщик трансляций"}
             ></PartnerCard>
             <PartnerCard
               img={
-                "https://avatars.mds.yandex.net/i?id=aa950cdb0955ff88059bdd793ca94d23_sr-5829296-images-thumbs&n=13"
+                "https://sun9-2.userapi.com/impf/c852232/v852232476/149dbb/nEa96OiTo0s.jpg?size=604x604&quality=96&sign=7666b5826a60450436bd10e2b5d6e7fc&type=album"
               }
-              name={"HellTv"}
+              name={"Blast"}
               position={"Крупнейший в мире поставщик трансляций"}
             ></PartnerCard>
             <PartnerCard
               img={
-                "https://avatars.mds.yandex.net/i?id=aa950cdb0955ff88059bdd793ca94d23_sr-5829296-images-thumbs&n=13"
+                "https://img.championat.com/s/1350x900/news/big/o/k/edinaya-liga-opublikovala-podborku-luchshih-momentov-finala-i-serii-za-trete-mesto_1717921201249692841.jpg"
               }
-              name={"HellTv"}
+              name={"Единая лига ВТБ"}
               position={"Крупнейший в мире поставщик трансляций"}
             ></PartnerCard>
             <PartnerCard
               img={
-                "https://avatars.mds.yandex.net/i?id=aa950cdb0955ff88059bdd793ca94d23_sr-5829296-images-thumbs&n=13"
+                "https://avatars.mds.yandex.net/i?id=757ee0380e3cf36ad4d71050bc12c8cb_sr-13315631-images-thumbs&n=13"
               }
-              name={"HellTv"}
-              position={"Крупнейший в мире поставщик трансляций"}
-            ></PartnerCard>
-            <PartnerCard
-              img={
-                "https://avatars.mds.yandex.net/i?id=aa950cdb0955ff88059bdd793ca94d23_sr-5829296-images-thumbs&n=13"
-              }
-              name={"HellTv"}
+              name={"Relog Media"}
               position={"Крупнейший в мире поставщик трансляций"}
             ></PartnerCard>
           </PlayersLayout>

@@ -95,6 +95,30 @@ export const messages = {
 
     main: "main",
     about: "about",
+
+    question1: "Do you have licensed rights for broadcasts?",
+    answer1:
+      "Yes, all rights are confirmed by official agreements with rights holders.",
+    question2: "What does your analytics include?",
+    answer2:
+      "Our analytics is an intelligent real-time video stream analysis, trained for specific esports disciplines.",
+    question3: "How does your marketplace work?",
+    answer3:
+      "It is a platform for convenient buying and selling rights to major esports events.",
+    question4: "What is included in event support?",
+    answer4:
+      "The full cycle — from organizing an esports event to working with the video stream.",
+    question5: "For which disciplines is analytics available?",
+    answer5:
+      "We support the most popular disciplines — Dota 2, CS2, and others.",
+    question6: "Is it possible to integrate your analytics via API?",
+    answer6: "Yes, we provide a convenient API for B2B clients.",
+    question7: "Do you work with international partners?",
+    answer7: "Yes, we have partners in Russia, Serbia, UAE, and Cyprus.",
+    question8:
+      "Is it possible to purchase rights for a specific tournament from you?",
+    answer8:
+      "Yes, through the marketplace you can buy rights for the event you are interested in.",
   },
   [LOCALES.RUSSIAN]: {
     //home
@@ -192,6 +216,29 @@ export const messages = {
 
     main: "главная",
     about: "о нас",
+
+    question1: "Лицензионные ли у вас права на трансляции?",
+    answer1:
+      "Да, все права подтверждены официальными договорами с правообладателями.",
+    question2: "Что включает в себя аналитика?",
+    answer2:
+      "Наша аналитика — это умный realtime-анализ видеопотока, обученный под отдельные киберспортивные дисциплины.",
+    question3: "Как работает ваш маркетплейс?",
+    answer3:
+      "Это площадка для удобной продажи и покупки прав на крупнейшие киберспортивные события.",
+    question4: "Что входит в сопровождение мероприятий?",
+    answer4:
+      "Полный цикл — от организации киберспортивного события до работы с видеопотоком.",
+    question5: "Для каких дисциплин доступна аналитика?",
+    answer5:
+      "Мы поддерживаем самые популярные дисциплины — Dota 2, CS2 и другие.",
+    question6: "Можно ли интегрировать вашу аналитику через API?",
+    answer6: "Да, мы предоставляем удобный API для B2B-клиентов.",
+    question7: "Работаете ли вы с международными партнёрами?",
+    answer7: "Да, у нас есть партнёры в России, Сербии, ОАЭ, и на Кипре.",
+    question8: "Можно ли приобрести у вас права на определённый турнир?",
+    answer8:
+      "Да, через маркетплейс вы можете купить права на интересующее вас событие.",
   },
   [LOCALES.KAZAKH]: {
     //home
@@ -286,5 +333,27 @@ export const messages = {
     too: 'ТОО "СГЛ"',
     main: "негізгі",
     about: "туралы",
+
+    question1: "Сізде трансляциялар үшін лицензиялы құқықтар бар ма?",
+    answer1:
+      "Иә, барлық құқықтар құқық иелерімен ресми келісімшарттармен расталған.",
+    question2: "Сіздің аналитикаңыз не нәрсені қамтиды?",
+    answer2:
+      "Біздің аналитика нақты уақыттағы видеожолақтың ақылды талдауы болып табылады, ол арнайы киберспорттық пәндерге үйретілген.",
+    question3: "Сіздің маркетплейсіңіз қалай жұмыс істейді?",
+    answer3:
+      "Бұл ірі киберспорттық оқиғалардың құқықтарын ыңғайлы сатуға және сатып алуға арналған платформа.",
+    question4: "Іс-шараларды сүйемелдеуге не кіреді?",
+    answer4:
+      "Толық цикл — киберспорттық оқиғаны ұйымдастырудан видеожолақпен жұмыс істеуге дейін.",
+    question5: "Қай пәндерге аналитика қолжетімді?",
+    answer5: "Біз ең танымал пәндерді қолдаймыз — Dota 2, CS2 және басқалары.",
+    question6: "Сіздің аналитикаңызды API арқылы біріктіруге бола ма?",
+    answer6: "Иә, біз B2B клиенттеріне ыңғайлы API ұсынамыз.",
+    question7: "Сіз халықаралық серіктестермен жұмыс жасайсыз ба?",
+    answer7: "Иә, бізде Ресейде, Сербияда, БАӘ-де және Кипрде серіктестер бар.",
+    question8: "Сізден белгілі бір турнирге құқықтарды сатып алуға бола ма?",
+    answer8:
+      "Иә, маркетплейс арқылы сіз қызықтырған оқиғаға құқықтарды сатып ала аласыз.",
   },
 };

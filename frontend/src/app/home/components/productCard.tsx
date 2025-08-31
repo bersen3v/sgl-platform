@@ -4,10 +4,9 @@ import { FiLink2 } from "react-icons/fi";
 import { styled } from "styled-components";
 import { Item10 } from "./3d/item10";
 import { Canvas } from "@react-three/fiber";
-import { Item3 } from "./3d/item3";
+
 import { Item8 } from "./3d/item8";
 import { Item9 } from "./3d/item9";
-import { useRouter } from "next/navigation";
 
 const ProductContainer = styled.div`
   display: flex;
@@ -56,14 +55,13 @@ export default function ProductCard({
   type,
   header,
   text,
-  link,
+  onClick,
 }: {
   type: "analytics" | "marketplace" | "walking";
   header: string;
   text: string;
-  link: string;
+  onClick: () => void;
 }) {
-  const router = useRouter();
   const getIcon = () => {
     switch (type) {
       case "analytics":
@@ -87,11 +85,7 @@ export default function ProductCard({
         </ProductInfo>
 
         <div style={{ display: "flex" }}>
-          <CircleButton
-            onClick={() => {
-              router.push("/search");
-            }}
-          >
+          <CircleButton onClick={onClick}>
             <FiLink2 size={20} color={MyColors.dark1} />
           </CircleButton>
         </div>

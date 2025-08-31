@@ -4,6 +4,7 @@ import { styled } from "styled-components";
 import { FiLink2 } from "react-icons/fi";
 import ProductCard from "../components/productCard";
 import { useIntl } from "react-intl";
+import { useRouter } from "next/navigation";
 
 const BlockContainer = styled.div`
   display: flex;
@@ -38,6 +39,7 @@ const ProductsLayout = styled.div`
 
 export default function ProductsBlock() {
   const intl = useIntl();
+  const router = useRouter();
   return (
     <BlockContainer>
       <ProductsContainer>
@@ -55,21 +57,25 @@ export default function ProductsBlock() {
           <ProductCard
             header={intl.formatMessage({ id: "analytics" })}
             text={intl.formatMessage({ id: "analyticsDescription" })}
-            link={""}
+            onClick={() => {}}
             type={"analytics"}
           ></ProductCard>
 
           <ProductCard
             header={intl.formatMessage({ id: "marketplace" })}
             text={intl.formatMessage({ id: "marketplaceDescription" })}
-            link={""}
+            onClick={() => {
+              router.push("/search");
+            }}
             type={"marketplace"}
           ></ProductCard>
 
           <ProductCard
             header={intl.formatMessage({ id: "walking" })}
             text={intl.formatMessage({ id: "walkingDescription" })}
-            link={""}
+            onClick={() => {
+              router.push("https://sgl.one/");
+            }}
             type={"walking"}
           ></ProductCard>
         </ProductsLayout>

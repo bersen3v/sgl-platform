@@ -44,8 +44,8 @@ export default function Footer() {
         ></img>
       </FooterHalfPart>
       <FooterHalfPartRight>
-        <TextStyle.FooterText>hello@sgl.com</TextStyle.FooterText>
-        <TextStyle.FooterText>+79991234556</TextStyle.FooterText>
+        <TextStyle.FooterText>sglonekz@gmail.com</TextStyle.FooterText>
+        <TextStyle.FooterText>8 776 419 99 01</TextStyle.FooterText>
         <div style={{ height: "5em" }}></div>
         <TextStyle.ProductText>
           {intl.formatMessage({ id: "too" })}
