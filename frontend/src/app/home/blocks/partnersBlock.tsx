@@ -61,28 +61,28 @@ export default function PartnersBlock() {
                 "https://mayak1932.kz/wp-content/uploads/2022/11/whatsapp-image-2022-11-16-at-09.18.07-1-1024x1024.jpeg"
               }
               name={"AstanaHub"}
-              position={"Крупнейший в мире поставщик трансляций"}
+              position={"Международный технопарк IT-стартапов"}
             ></PartnerCard>
             <PartnerCard
               img={
                 "https://sun9-2.userapi.com/impf/c852232/v852232476/149dbb/nEa96OiTo0s.jpg?size=604x604&quality=96&sign=7666b5826a60450436bd10e2b5d6e7fc&type=album"
               }
               name={"Blast"}
-              position={"Крупнейший в мире поставщик трансляций"}
+              position={"Киберспортивная лига"}
             ></PartnerCard>
             <PartnerCard
               img={
                 "https://img.championat.com/s/1350x900/news/big/o/k/edinaya-liga-opublikovala-podborku-luchshih-momentov-finala-i-serii-za-trete-mesto_1717921201249692841.jpg"
               }
               name={"Единая лига ВТБ"}
-              position={"Крупнейший в мире поставщик трансляций"}
+              position={"Крупнейший в РФ баскетбольный турнир"}
             ></PartnerCard>
             <PartnerCard
               img={
                 "https://avatars.mds.yandex.net/i?id=757ee0380e3cf36ad4d71050bc12c8cb_sr-13315631-images-thumbs&n=13"
               }
               name={"Relog Media"}
-              position={"Крупнейший в мире поставщик трансляций"}
+              position={"Организатор турниров по киберспорту"}
             ></PartnerCard>
           </PlayersLayout>
         </PlayersScroll>
