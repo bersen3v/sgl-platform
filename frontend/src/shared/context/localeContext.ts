@@ -1,3 +1,5 @@
+"use client";
+
 import { LOCALES } from "@/i18n/locales";
 import { createContext, useContext } from "react";
 

@@ -1,3 +1,4 @@
+"use client";
 import { MyColors } from "@/shared/styles";
 import { TextStyle } from "@/shared/styles/MyTypography/textStyles";
 import { useState } from "react";

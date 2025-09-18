@@ -6,7 +6,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useLayoutEffect, useState } from "react";
 import { useLocale } from "@/shared/context/localeContext";
 
-const blockedPages = ["/"];
+const blockedPages = ["/", "/analytics", "/aboutus"];
 
 export default function CustomHeader() {
   const router = useRouter();
@@ -42,6 +42,7 @@ export default function CustomHeader() {
         style={{
           height: 30,
           objectFit: "cover",
+          cursor: "pointer",
         }}
       ></img>
 

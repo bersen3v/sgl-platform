@@ -3,6 +3,10 @@
   --foreground: #171717;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #272727;
@@ -12,6 +16,7 @@
 
 html::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
+  scroll-behavior: smooth;
 }
 
 html,

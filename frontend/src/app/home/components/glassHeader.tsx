@@ -2,6 +2,7 @@ import { desktopMinWidth } from "@/shared/constants/adaptive";
 import { MyColors } from "@/shared/styles";
 import { TextStyle } from "@/shared/styles/MyTypography/textStyles";
 import LanguageSelect from "@/shared/widgets/customHeader/components/languageSelect";
+import { useRouter } from "next/navigation";
 import { useIntl } from "react-intl";
 import { styled } from "styled-components";
 
@@ -73,25 +74,42 @@ const HeaderButtons = styled.div`
 
 export default function GlassHeader() {
   const intl = useIntl();
+  const router = useRouter();
   return (
     <HeaderMenuLayout>
       <HeaderMenu>
         <img
-          onClick={() => {}}
+          onClick={() => {
+            router.push("/");
+          }}
           src="/icons/logo.png"
           style={{
             height: 25,
             objectFit: "cover",
+            cursor: "pointer",
           }}
         ></img>
         <HeaderButtons>
-          <TextStyle.HeaderMenuText>
+          <TextStyle.HeaderMenuText
+            onClick={() => {
+              router.push("/");
+            }}
+          >
             {intl.formatMessage({ id: "main" })}
           </TextStyle.HeaderMenuText>
-          <TextStyle.HeaderMenuText>
+
+          <TextStyle.HeaderMenuText
+            onClick={() => {
+              router.push("/#products");
+            }}
+          >
             {intl.formatMessage({ id: "products" })}
           </TextStyle.HeaderMenuText>
-          <TextStyle.HeaderMenuText>
+          <TextStyle.HeaderMenuText
+            onClick={() => {
+              router.push("/aboutus");
+            }}
+          >
             {intl.formatMessage({ id: "about" })}
           </TextStyle.HeaderMenuText>
         </HeaderButtons>

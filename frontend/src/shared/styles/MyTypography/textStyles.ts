@@ -8,6 +8,7 @@ const Header = styled.h1`
   text-align: center;
   font-weight: 400;
   color: #ffffff;
+  line-height: 1.2;
 
   /* Для мобильных устройств - шире */
   max-width: 90%;
@@ -23,6 +24,7 @@ const ProductHeader = styled.h1`
   font-size: 1.5em;
   font-weight: 400;
   color: #ffffff;
+  line-height: 1.2;
 `;
 
 const ProductText = styled.h1`
@@ -31,6 +33,7 @@ const ProductText = styled.h1`
   font-weight: 450;
   color: #ffffff;
   opacity: 0.5;
+  line-height: 1.2;
 `;
 
 const HeaderLeft = styled.h1`
@@ -39,6 +42,7 @@ const HeaderLeft = styled.h1`
   text-align: left;
   font-weight: 400;
   color: #ffffff;
+  line-height: 1.2;
 
   /* Для мобильных устройств - шире */
   max-width: 90%;
@@ -57,6 +61,7 @@ const Header2 = styled.h2`
   color: #e0e0e0;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
   opacity: 0.5;
+  line-height: 1.2;
 
   /* Для мобильных устройств - шире */
   max-width: 90%;
@@ -75,7 +80,7 @@ const Header2Left = styled.h2`
   color: #e0e0e0;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
   opacity: 0.5;
-
+  line-height: 1.2;
   /* Для мобильных устройств - шире */
   /* max-width: 90%; */
 
@@ -90,6 +95,7 @@ const Button = styled.h3`
   font-size: 1.5em;
   text-align: center;
   font-weight: 500;
+  line-height: 1.2;
 `;
 
 const FooterText = styled.h3`
@@ -98,6 +104,7 @@ const FooterText = styled.h3`
   text-align: center;
   font-weight: 500;
   color: ${MyColors.green};
+  line-height: 1.2;
 `;
 
 const HeaderMenuText = styled.h3`
@@ -108,6 +115,7 @@ const HeaderMenuText = styled.h3`
   cursor: pointer;
   color: "white";
   opacity: 0.5;
+  line-height: 1.2;
 
   &:hover {
     opacity: 1;

@@ -1,14 +1,13 @@
 import { styled } from "styled-components";
 import { TextStyle } from "@/shared/styles/MyTypography/textStyles";
-import CustomBlackButton from "../components/customBlackButton";
 
-import GradientBubbles from "../components/bubbles";
 import { MyColors } from "@/shared/styles";
 import { scrollToSection } from "@/shared/tools/scrollToSection";
+import GradientBubbles from "@/app/home/components/bubbles";
 
 const FirstBlockContainer = styled.div`
   display: flex;
-  padding: 2.5em;
+  padding: 5em 3em;
   justify-content: center;
   flex-direction: column;
   align-items: center;
@@ -17,7 +16,7 @@ const FirstBlockContainer = styled.div`
 
   position: relative;
   overflow: hidden;
-  box-shadow: 0px 30px 100px ${MyColors.green}20;
+  /* box-shadow: 0px 30px 100px ${MyColors.green}20; */
   border-radius: 1em;
   border: 0.1em solid ${MyColors.green}20;
 `;
@@ -31,7 +30,7 @@ const ContentWrapper = styled.div`
   gap: 1.2em;
 `;
 
-export default function CallToActionComponent({
+export default function MissionBox({
   header,
   text,
 }: {
@@ -45,10 +44,6 @@ export default function CallToActionComponent({
         <ContentWrapper>
           <TextStyle.Header>{header}</TextStyle.Header>
           <TextStyle.Header2>{text}</TextStyle.Header2>
-          <CustomBlackButton
-            placeholder={"связаться"}
-            onClick={() => scrollToSection({ id: "footer" })}
-          ></CustomBlackButton>
         </ContentWrapper>
       </FirstBlockContainer>
     </>

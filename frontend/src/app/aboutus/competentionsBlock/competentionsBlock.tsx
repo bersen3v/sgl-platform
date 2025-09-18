@@ -2,13 +2,15 @@ import { MyColors } from "@/shared/styles";
 import { TextStyle } from "@/shared/styles/MyTypography/textStyles";
 import { styled } from "styled-components";
 import { FiLink2 } from "react-icons/fi";
-import ProductCard from "../components/productCard";
 import { useIntl } from "react-intl";
 import { useRouter } from "next/navigation";
+import ProductCard from "@/app/home/components/productCard";
+import ProductRoadTile from "./components/roadTile";
 
 const BlockContainer = styled.div`
   display: flex;
   padding: 2em;
+  padding-top: 0px;
   justify-content: flex-start;
   flex-direction: column;
   align-items: center;
@@ -37,11 +39,11 @@ const ProductsLayout = styled.div`
   flex-wrap: wrap;
 `;
 
-export default function ProductsBlock() {
+export default function CompetentionsBlock() {
   const intl = useIntl();
   const router = useRouter();
   return (
-    <BlockContainer id="products">
+    <BlockContainer>
       <ProductsContainer>
         <TextStyle.ProductHeader
           style={{
@@ -51,35 +53,47 @@ export default function ProductsBlock() {
             fontWeight: 500,
           }}
         >
-          {intl.formatMessage({ id: "products" })}
+          Наши компетенции
+          {/* {intl.formatMessage({ id: "products" })} */}
         </TextStyle.ProductHeader>
         <ProductsLayout>
-          <ProductCard
-            header={intl.formatMessage({ id: "analytics" })}
-            text={intl.formatMessage({ id: "analyticsDescription" })}
-            onClick={() => {
-              router.push("/analytics");
-            }}
-            type={"analytics"}
-          ></ProductCard>
-
-          <ProductCard
-            header={intl.formatMessage({ id: "marketplace" })}
-            text={intl.formatMessage({ id: "marketplaceDescription" })}
+          <ProductRoadTile
+            header={"Разработка и внедрение программного обеспечения"}
             onClick={() => {
               router.push("/search");
             }}
             type={"marketplace"}
-          ></ProductCard>
+            counter={"01"}
+          ></ProductRoadTile>
 
-          <ProductCard
-            header={intl.formatMessage({ id: "walking" })}
-            text={intl.formatMessage({ id: "walkingDescription" })}
+          <ProductRoadTile
+            header={"Техническая поддержка и развитие цифровых решений"}
+            onClick={() => {
+              router.push("/search");
+            }}
+            type={"marketplace"}
+            counter={"02"}
+          ></ProductRoadTile>
+
+          <ProductRoadTile
+            header={"Интеграция и модификация продуктов под потребности рынка"}
             onClick={() => {
               router.push("https://sgl.one/");
             }}
             type={"walking"}
-          ></ProductCard>
+            counter={"03"}
+          ></ProductRoadTile>
+
+          <ProductRoadTile
+            header={
+              "Коммерциализация программных продуктов и сервисов, включая размещение платного контента и продажу дополнительных функций"
+            }
+            onClick={() => {
+              router.push("https://sgl.one/");
+            }}
+            type={"walking"}
+            counter={"04"}
+          ></ProductRoadTile>
         </ProductsLayout>
       </ProductsContainer>
     </BlockContainer>
