@@ -62,8 +62,7 @@ export default function ProductRoadBlock({
             fontWeight: 500,
           }}
         >
-          Как это работает?
-          {/* {intl.formatMessage({ id: "products" })} */}
+          {intl.formatMessage({ id: "howitworks" })}
         </TextStyle.ProductHeader>
         <ProductsLayout>
           {items.map((val) => (

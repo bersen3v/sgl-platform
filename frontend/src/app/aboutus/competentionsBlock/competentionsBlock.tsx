@@ -53,8 +53,7 @@ export default function CompetentionsBlock() {
             fontWeight: 500,
           }}
         >
-          Наши компетенции
-          {/* {intl.formatMessage({ id: "products" })} */}
+          {intl.formatMessage({ id: "ourcompetentions" })}
         </TextStyle.ProductHeader>
         <ProductsLayout>
           <ProductRoadTile

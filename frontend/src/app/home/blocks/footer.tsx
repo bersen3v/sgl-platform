@@ -4,6 +4,7 @@ import { FaInstagram, FaTelegram, FaWhatsapp } from "react-icons/fa";
 import { useIntl } from "react-intl";
 import { styled } from "styled-components";
 import { RiTelegramLine } from "react-icons/ri";
+import { useRouter } from "next/navigation";
 
 const BlockContainer = styled.div`
   display: flex;
@@ -31,6 +32,7 @@ const FooterHalfPartRight = styled.div`
 
 export default function Footer() {
   const intl = useIntl();
+  const router = useRouter();
   return (
     <BlockContainer id="footer">
       <FooterHalfPart>
@@ -48,22 +50,54 @@ export default function Footer() {
       <FooterHalfPartRight>
         <TextStyle.FooterText>sglonekz@gmail.com</TextStyle.FooterText>
         <TextStyle.FooterText>8 776 419 99 01</TextStyle.FooterText>
-        <div>
-          <RiTelegramLine />
-          <FaInstagram />
-          <FaWhatsapp />
+        <div style={{ display: "flex", gap: "0.6em", cursor: "pointer" }}>
+          <RiTelegramLine
+            size={32}
+            color={MyColors.green}
+            onClick={() => {
+              router.push("https://t.me/sglonekz");
+            }}
+          />
+          <FaInstagram
+            size={32}
+            color={MyColors.green}
+            onClick={() => {
+              router.push(
+                "https://www.instagram.com/sglone.kz?igsh=eWZ1NjhqMDdmbmw="
+              );
+            }}
+          />
+          <FaWhatsapp
+            size={32}
+            color={MyColors.green}
+            onClick={() => {
+              router.push("https://wa.me/87764199901");
+            }}
+          />
         </div>
         <div style={{ height: "5em" }}></div>
         <div style={{ display: "flex", flexDirection: "column", gap: "0.6em" }}>
           <TextStyle.ProductText style={{ textAlign: "right" }}>
             {intl.formatMessage({ id: "too" })}
           </TextStyle.ProductText>
-          <TextStyle.ProductText style={{ textAlign: "right" }}>
-            Политика конфиденциальности
-          </TextStyle.ProductText>
-          <TextStyle.ProductText style={{ textAlign: "right" }}>
-            Согласие на обработку персональных данных
-          </TextStyle.ProductText>
+
+          <a href="/companyCard.txt" download>
+            <TextStyle.ProductText style={{ textAlign: "right" }}>
+              {intl.formatMessage({ id: "companycard" })}
+            </TextStyle.ProductText>
+          </a>
+
+          <a href="/policy.docx" download>
+            <TextStyle.ProductText style={{ textAlign: "right" }}>
+              {intl.formatMessage({ id: "confpolicy" })}
+            </TextStyle.ProductText>
+          </a>
+
+          <a href="/userpolicy.docx" download>
+            <TextStyle.ProductText style={{ textAlign: "right" }}>
+              {intl.formatMessage({ id: "userpolicy" })}
+            </TextStyle.ProductText>
+          </a>
         </div>
       </FooterHalfPartRight>
     </BlockContainer>

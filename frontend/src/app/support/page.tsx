@@ -7,12 +7,11 @@ import FaqBlock from "../home/blocks/faqBlock";
 import CallToActionBlock from "../home/blocks/callToActionBlock";
 
 import { useIntl } from "react-intl";
-import { Item10 } from "../home/components/3d/item10";
+
 import ProductHeaderBlock from "../analytics/components/headerBlock/productHeaderBlock";
 import ProductDescriptionBlock from "../analytics/components/descriptionBlock/productDescriptionBlock";
 import ProductRoadBlock from "../analytics/components/roadBlock/productRoadBlock";
-import ProductDisciplinesBlock from "../analytics/components/disciplinesBlock/productDisciplinesBlock";
-import { Item8 } from "../home/components/3d/item8";
+
 import { Item9 } from "../home/components/3d/item9";
 import { useRouter } from "next/navigation";
 import Footer from "../home/blocks/footer";

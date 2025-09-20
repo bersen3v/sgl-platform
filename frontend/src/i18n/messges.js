@@ -283,6 +283,14 @@ export const messages = {
     value4Header: "[ Development ]",
     value4Text:
       "we contribute to the growth of esports as a mass phenomenon and professional industry.",
+
+    howitworks: "How it works?",
+    disciplines: "Disciplines",
+    companycard: "Company Card",
+    confpolicy: "Privacy Policy",
+    userpolicy: "User Agreement",
+    productSite: "product webite",
+    ourcompetentions: "Our competencies",
   },
   [LOCALES.RUSSIAN]: {
     //home
@@ -568,6 +576,13 @@ export const messages = {
     value4Header: "[ Развитие ]",
     value4Text:
       "способствуем росту киберспорта как массового явления и профессиональной отрасли.",
+    howitworks: "Как это работает?",
+    disciplines: "Дисциплины",
+    companycard: "Карточка компании",
+    confpolicy: "Политика конфиденциальности",
+    userpolicy: "Пользовательское соглашение",
+    productSite: "сайт продукта",
+    ourcompetentions: "Наши компетенции",
   },
   [LOCALES.KAZAKH]: {
     //home
@@ -854,5 +869,13 @@ export const messages = {
     value4Header: "[ Даму ]",
     value4Text:
       "біз киберспорттың жаппай құбылыс және кәсіби сала ретінде өсуіне ықпал етеміз.",
+
+    howitworks: "Бұл қалай жұмыс істейді?",
+    disciplines: "Пәндер",
+    companycard: "Компания карточкасы",
+    confpolicy: "Құпиялылық саясаты",
+    userpolicy: "Пайдаланушы келісімі",
+    productSite: "Өнімнің веб-сайты",
+    ourcompetentions: "Біздің құзыреттеріміз",
   },
 };

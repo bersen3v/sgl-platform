@@ -46,7 +46,7 @@ export default function ProductDisciplinesBlock() {
           paddingBottom: 0,
         }}
       >
-        Дисциплины
+        {intl.formatMessage({ id: "disciplines" })}
       </TextStyle.ProductHeader>
       <BlockContainer>
         <PlayersScroll>
@@ -57,7 +57,7 @@ export default function ProductDisciplinesBlock() {
             ></DisciplineCard>
             <DisciplineCard
               img={"icons/penalty.gif"}
-              name={"Пенальти"}
+              name={"FIFA"}
             ></DisciplineCard>
             <DisciplineCard
               img={"icons/dota.gif"}
