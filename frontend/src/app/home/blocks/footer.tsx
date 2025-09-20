@@ -1,7 +1,9 @@
 import { MyColors } from "@/shared/styles";
 import { TextStyle } from "@/shared/styles/MyTypography/textStyles";
+import { FaInstagram, FaTelegram, FaWhatsapp } from "react-icons/fa";
 import { useIntl } from "react-intl";
 import { styled } from "styled-components";
+import { RiTelegramLine } from "react-icons/ri";
 
 const BlockContainer = styled.div`
   display: flex;
@@ -46,10 +48,23 @@ export default function Footer() {
       <FooterHalfPartRight>
         <TextStyle.FooterText>sglonekz@gmail.com</TextStyle.FooterText>
         <TextStyle.FooterText>8 776 419 99 01</TextStyle.FooterText>
+        <div>
+          <RiTelegramLine />
+          <FaInstagram />
+          <FaWhatsapp />
+        </div>
         <div style={{ height: "5em" }}></div>
-        <TextStyle.ProductText>
-          {intl.formatMessage({ id: "too" })}
-        </TextStyle.ProductText>
+        <div style={{ display: "flex", flexDirection: "column", gap: "0.6em" }}>
+          <TextStyle.ProductText style={{ textAlign: "right" }}>
+            {intl.formatMessage({ id: "too" })}
+          </TextStyle.ProductText>
+          <TextStyle.ProductText style={{ textAlign: "right" }}>
+            Политика конфиденциальности
+          </TextStyle.ProductText>
+          <TextStyle.ProductText style={{ textAlign: "right" }}>
+            Согласие на обработку персональных данных
+          </TextStyle.ProductText>
+        </div>
       </FooterHalfPartRight>
     </BlockContainer>
   );

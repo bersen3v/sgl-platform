@@ -15,6 +15,7 @@ import {
   showErrorNotification,
   showSuccessNotification,
 } from "@/shared/notifications/notificationsController";
+import GradientBubbles from "../home/components/bubbles";
 
 const HomePageContainer = styled.div`
   display: flex;
@@ -33,6 +34,8 @@ const InputBlocker = styled.div`
   flex-direction: column;
   gap: 1em;
   width: 80%;
+
+  z-index: 10;
 
   @media (min-width: ${desktopMinWidth}px) {
     width: 50%;
@@ -78,8 +81,9 @@ export default function ContactUs() {
   return (
     <HomePageContainer>
       <GlassHeader></GlassHeader>
-      <ContactusHeader></ContactusHeader>
+      <GradientBubbles></GradientBubbles>
       <InputBlocker>
+        <ContactusHeader></ContactusHeader>
         <CustomInput
           bgColor={MyColors.dark3}
           placeholder="Имя"

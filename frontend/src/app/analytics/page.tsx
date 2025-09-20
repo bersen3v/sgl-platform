@@ -3,7 +3,7 @@ import { MyColors } from "@/shared/styles";
 import { styled } from "styled-components";
 import GlassHeader from "../home/components/glassHeader";
 import FaqBlock from "../home/blocks/faqBlock";
-import Footer from "../home/blocks/footer";
+
 import CallToActionBlock from "../home/blocks/callToActionBlock";
 import ProductHeaderBlock from "./components/headerBlock/productHeaderBlock";
 import ProductDescriptionBlock from "./components/descriptionBlock/productDescriptionBlock";
@@ -11,6 +11,7 @@ import ProductRoadBlock from "./components/roadBlock/productRoadBlock";
 import ProductDisciplinesBlock from "./components/disciplinesBlock/productDisciplinesBlock";
 import { useIntl } from "react-intl";
 import { Item10 } from "../home/components/3d/item10";
+import Footer from "../home/blocks/footer";
 
 const PageContainer = styled.div`
   background-color: ${MyColors.dark1};

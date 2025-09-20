@@ -30,6 +30,7 @@ const ContentWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 1.2em;
+  padding: 2em 0em;
 `;
 
 export default function ContactusHeader() {
@@ -74,7 +75,7 @@ export default function ContactusHeader() {
       <FirstBlockContainer>
         <ContentWrapper>
           <TextStyle.Header2 ref={paragraphRef}>
-            Оставьте свои данные и мы свяжемся с вами
+            Оставьте свои контактные данные и мы свяжемся с вами
           </TextStyle.Header2>
         </ContentWrapper>
       </FirstBlockContainer>
