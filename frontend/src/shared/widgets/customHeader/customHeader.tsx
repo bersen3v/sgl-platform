@@ -6,7 +6,14 @@ import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useLayoutEffect, useState } from "react";
 import { useLocale } from "@/shared/context/localeContext";
 
-const blockedPages = ["/", "/analytics", "/aboutus"];
+const blockedPages = [
+  "/",
+  "/analytics",
+  "/aboutus",
+  "/marketplace",
+  "/support",
+  "/contactus",
+];
 
 export default function CustomHeader() {
   const router = useRouter();

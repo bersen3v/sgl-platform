@@ -30,16 +30,12 @@ const ProductInfo = styled.div`
 
 export default function ProductRoadTile({
   counter,
-  type,
   header,
   text,
-  onClick,
 }: {
   counter: string;
-  type: "analytics" | "marketplace" | "walking";
   header: string;
   text: string;
-  onClick: () => void;
 }) {
   return (
     <ProductContainer>

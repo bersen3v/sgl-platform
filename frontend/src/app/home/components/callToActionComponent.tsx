@@ -5,6 +5,7 @@ import CustomBlackButton from "../components/customBlackButton";
 import GradientBubbles from "../components/bubbles";
 import { MyColors } from "@/shared/styles";
 import { scrollToSection } from "@/shared/tools/scrollToSection";
+import { useRouter } from "next/navigation";
 
 const FirstBlockContainer = styled.div`
   display: flex;
@@ -38,6 +39,7 @@ export default function CallToActionComponent({
   header: string;
   text: string;
 }) {
+  const router = useRouter();
   return (
     <>
       <FirstBlockContainer>
@@ -47,7 +49,7 @@ export default function CallToActionComponent({
           <TextStyle.Header2>{text}</TextStyle.Header2>
           <CustomBlackButton
             placeholder={"связаться"}
-            onClick={() => scrollToSection({ id: "footer" })}
+            onClick={() => router.push("/contactus")}
           ></CustomBlackButton>
         </ContentWrapper>
       </FirstBlockContainer>

@@ -67,7 +67,7 @@ export default function ProductsBlock() {
             header={intl.formatMessage({ id: "marketplace" })}
             text={intl.formatMessage({ id: "marketplaceDescription" })}
             onClick={() => {
-              router.push("/search");
+              router.push("/marketplace");
             }}
             type={"marketplace"}
           ></ProductCard>
@@ -76,7 +76,7 @@ export default function ProductsBlock() {
             header={intl.formatMessage({ id: "walking" })}
             text={intl.formatMessage({ id: "walkingDescription" })}
             onClick={() => {
-              router.push("https://sgl.one/");
+              router.push("/support");
             }}
             type={"walking"}
           ></ProductCard>

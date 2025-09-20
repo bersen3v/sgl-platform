@@ -1,6 +1,7 @@
 "use client";
 import localFont from "next/font/local";
 import "./globals.css";
+import Head from "next/head";
 
 import { messages } from "../i18n/messges";
 import CustomHeader from "@/shared/widgets/customHeader/customHeader";
@@ -47,7 +48,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const defaultLocale = LOCALES.ENGLISH;
+  const defaultLocale = LOCALES.RUSSIAN;
   const [currentLocale, setCurrentLocale] = useState(defaultLocale);
 
   const localeContextValue = {
@@ -57,6 +58,9 @@ export default function RootLayout({
 
   return (
     <html lang="en" style={{ height: "100%", scrollbarWidth: "none" }}>
+      <Head>
+        <link rel="icon" href="/favicon.png" />
+      </Head>
       <body
         className={`${helvetica.className} antialiased`}
         style={{
@@ -65,12 +69,12 @@ export default function RootLayout({
           height: "100%",
         }}
       >
+        <Toaster position="top-center" richColors></Toaster>
         <LocaleContext.Provider value={localeContextValue}>
           <I18nWrapper
             locale={defaultLocale}
             messages={messages[currentLocale]}
           >
-            <Toaster position="top-right" richColors></Toaster>
             <CustomHeader></CustomHeader>
             <main style={{ flex: 1 }}>{children}</main>
           </I18nWrapper>

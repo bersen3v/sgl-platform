@@ -90,14 +90,22 @@ export default function EcosystemBlock() {
           }}
           ref={paragraphRef}
         >
-          Киберспортивный холдинг SGL – это экосистема, объединяющая ключевые
-          направления киберспорта
+          {intl.formatMessage({ id: "ecosystemTitle" })}
         </TextStyle.ProductHeader>
       </EcosystemBlockHeader>
       <EcosystemTiles>
-        <EcosystemTile name={"Аналитика матчей"} link={""}></EcosystemTile>
-        <EcosystemTile name={"Продажа прав"} link={""}></EcosystemTile>
-        <EcosystemTile name={"Организация турниров"} link={""}></EcosystemTile>
+        <EcosystemTile
+          name={intl.formatMessage({ id: "ecosystemService1" })}
+          link={"/analytics"}
+        ></EcosystemTile>
+        <EcosystemTile
+          name={intl.formatMessage({ id: "ecosystemService2" })}
+          link={"/marketplace"}
+        ></EcosystemTile>
+        <EcosystemTile
+          name={intl.formatMessage({ id: "ecosystemService3" })}
+          link={"/support"}
+        ></EcosystemTile>
       </EcosystemTiles>
     </FirstBlockContainer>
   );

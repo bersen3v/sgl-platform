@@ -1,6 +1,6 @@
 import { MyBordersRadius, MyColors } from "@/shared/styles";
 import { TextStyle } from "@/shared/styles/MyTypography/textStyles";
-import { useEffect, useRef } from "react";
+import { ReactNode, useEffect, useRef } from "react";
 import { useIntl } from "react-intl";
 import { styled } from "styled-components";
 import { gsap } from "gsap";
@@ -39,7 +39,17 @@ const CanvasContainer = styled.div`
   align-items: center;
 `;
 
-export default function ProductHeaderBlock() {
+export default function ProductHeaderBlock({
+  productName,
+  productDescription,
+  onClick,
+  obj3d,
+}: {
+  productName: string;
+  productDescription: string;
+  onClick: () => void;
+  obj3d: ReactNode;
+}) {
   const headingRef = useRef(null);
   const paragraphRef = useRef(null);
   const intl = useIntl();
@@ -79,19 +89,15 @@ export default function ProductHeaderBlock() {
   return (
     <BlockContainer>
       <CanvasContainer>
-        <Canvas>
-          <Item10></Item10>
-        </Canvas>
+        <Canvas>{obj3d}</Canvas>
       </CanvasContainer>
 
       <InfoPart>
-        <TextStyle.Header ref={headingRef}>
-          {intl.formatMessage({ id: "analytics" })}
-        </TextStyle.Header>
+        <TextStyle.Header ref={headingRef}>{productName}</TextStyle.Header>
         <TextStyle.Header2 ref={paragraphRef}>
-          {intl.formatMessage({ id: "analyticsDescription" })}
+          {productDescription}
         </TextStyle.Header2>
-        <LinkButton text="сайт продукта" onClick={() => {}}></LinkButton>
+        <LinkButton text="сайт продукта" onClick={onClick}></LinkButton>
       </InfoPart>
     </BlockContainer>
   );

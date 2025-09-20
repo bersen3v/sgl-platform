@@ -84,10 +84,11 @@ export default function AboutHeaderBlock() {
               objectFit: "cover",
             }}
           ></img>
-          <TextStyle.Header ref={headingRef}>ТОО «СГЛ»</TextStyle.Header>
+          <TextStyle.Header ref={headingRef}>
+            {intl.formatMessage({ id: "companyName" })}
+          </TextStyle.Header>
           <TextStyle.Header2 ref={paragraphRef}>
-            участник международного технологического парка Astana Hub и
-            разработчик инновационного проекта «Киберспортивная платформа SGL»
+            {intl.formatMessage({ id: "companyDescription" })}
           </TextStyle.Header2>
         </ContentWrapper>
       </FirstBlockContainer>

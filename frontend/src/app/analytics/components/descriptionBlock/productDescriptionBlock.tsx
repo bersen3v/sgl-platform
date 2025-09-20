@@ -49,30 +49,27 @@ const LinearFooter = styled.div`
   margin-top: -4em;
 `;
 
-export default function ProductDescriptionBlock() {
+export default function ProductDescriptionBlock({
+  items,
+}: {
+  items: {
+    header: string;
+    text: string;
+  }[];
+}) {
   return (
     <FirstBlockContainer>
       <GradientBubbles></GradientBubbles>
       <LinearHeader></LinearHeader>
+
       <TimelineStyle>
-        <TimeLinePoint
-          header={"Для кого?"}
-          text={
-            "Наши клиенты - правообладатели киберспортивного медиаконтента, которым необходимо получать быструю и качественную оцифровку матчей"
-          }
-        ></TimeLinePoint>
-        <TimeLinePoint
-          header={"Что мы делаем?"}
-          text={
-            "Получаем на вход голый видеопоток, автоматически обрабатываем и отдаём готовый набор метрик киберспортивного матча. Всё это в реальном времени"
-          }
-        ></TimeLinePoint>
-        <TimeLinePoint
-          header={"Какую пользу это приносит?"}
-          text={
-            "Больше не нужно вручную считать голы, киллы и прочие необходимые для трансляции метрики. Теперь это делают технологии компьютерного зрения. Автоматически. Без cна, отдыха и дорогостояющих ошибок. "
-          }
-        ></TimeLinePoint>
+        {items.map((val) => (
+          <TimeLinePoint
+            key={val.header}
+            header={val.header}
+            text={val.text}
+          ></TimeLinePoint>
+        ))}
       </TimelineStyle>
       <LinearFooter></LinearFooter>
     </FirstBlockContainer>

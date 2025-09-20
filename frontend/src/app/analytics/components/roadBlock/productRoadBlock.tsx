@@ -40,7 +40,15 @@ const ProductsLayout = styled.div`
   /* flex-wrap: wrap; */
 `;
 
-export default function ProductRoadBlock() {
+export default function ProductRoadBlock({
+  items,
+}: {
+  items: {
+    header: string;
+    text: string;
+    counter: string;
+  }[];
+}) {
   const intl = useIntl();
   const router = useRouter();
   return (
@@ -58,41 +66,14 @@ export default function ProductRoadBlock() {
           {/* {intl.formatMessage({ id: "products" })} */}
         </TextStyle.ProductHeader>
         <ProductsLayout>
-          <ProductRoadTile
-            header={
-              "Вы загружаете готовое видео или передаёте ссылку на трансляцию"
-            }
-            text={"От вас нужен только ваш медиаконтент. Больше ничего!"}
-            onClick={() => {
-              router.push("/search");
-            }}
-            type={"marketplace"}
-            counter={"01"}
-          ></ProductRoadTile>
-
-          <ProductRoadTile
-            header={"Система обрабатывает видеопоток"}
-            text={
-              "С помощью алгоритмов компьютерного зрения мы в тот же момент получаем необходимую статистику и отдаём в виде API, JSON или текста"
-            }
-            onClick={() => {
-              router.push("/search");
-            }}
-            type={"marketplace"}
-            counter={"02"}
-          ></ProductRoadTile>
-
-          <ProductRoadTile
-            header={"Вы получаете аналитику вашего киберспортивного события"}
-            text={
-              "Далее вы можете воспользоваться другими нашими сервисами для того, чтобы на основе статистики добавить поверх вашего видеопотока кастомные худы. "
-            }
-            onClick={() => {
-              router.push("https://sgl.one/");
-            }}
-            type={"walking"}
-            counter={"03"}
-          ></ProductRoadTile>
+          {items.map((val) => (
+            <ProductRoadTile
+              key={val.header}
+              header={val.header}
+              text={val.text}
+              counter={val.counter}
+            ></ProductRoadTile>
+          ))}
         </ProductsLayout>
       </ProductsContainer>
     </BlockContainer>

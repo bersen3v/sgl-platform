@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 import ValueView from "./components/valueView";
 import GradientBubbles from "@/app/home/components/bubbles";
 import { MyColors } from "@/shared/styles";
+import { useIntl } from "react-intl";
 
 const FirstBlockContainer = styled.div`
   display: flex;
@@ -44,33 +45,26 @@ const LinearFooter = styled.div`
 `;
 
 export default function OurValuesBlock() {
+  const intl = useIntl();
   return (
     <FirstBlockContainer>
       {/* <GradientBubbles></GradientBubbles> */}
       {/* <LinearHeader></LinearHeader> */}
       <ValueView
-        header={"[ Инновации ]"}
-        text={
-          "мы внедряем современные технологии и стремимся быть на шаг впереди."
-        }
+        header={intl.formatMessage({ id: "value1Header" })}
+        text={intl.formatMessage({ id: "value1Text" })}
       ></ValueView>
       <ValueView
-        header={"[ Открытость ]"}
-        text={
-          "создаем удобные решения для всех участников киберспортивной индустрии."
-        }
+        header={intl.formatMessage({ id: "value2Header" })}
+        text={intl.formatMessage({ id: "value2Text" })}
       ></ValueView>
       <ValueView
-        header={"[ Партнерство ]"}
-        text={
-          "строим долгосрочные отношения с международными и локальными компаниями."
-        }
+        header={intl.formatMessage({ id: "value3Header" })}
+        text={intl.formatMessage({ id: "value3Text" })}
       ></ValueView>
       <ValueView
-        header={"[ Развитие ]"}
-        text={
-          "способствуем росту киберспорта как массового явления и профессиональной отрасли."
-        }
+        header={intl.formatMessage({ id: "value4Header" })}
+        text={intl.formatMessage({ id: "value4Text" })}
       ></ValueView>
       {/* <LinearFooter></LinearFooter> */}
     </FirstBlockContainer>

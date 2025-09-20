@@ -57,7 +57,7 @@ export default function LinkButton({
   onClick: () => void;
 }) {
   return (
-    <ButtonStyle>
+    <ButtonStyle onClick={onClick}>
       <div style={{ display: "flex" }}>
         <CircleButton onClick={onClick}>
           <FiLink2 size={"1.5em"} color={MyColors.dark1} />

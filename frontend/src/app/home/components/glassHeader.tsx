@@ -3,13 +3,15 @@ import { MyColors } from "@/shared/styles";
 import { TextStyle } from "@/shared/styles/MyTypography/textStyles";
 import LanguageSelect from "@/shared/widgets/customHeader/components/languageSelect";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { IoClose, IoMenu } from "react-icons/io5";
 import { useIntl } from "react-intl";
 import { styled } from "styled-components";
 
 const HeaderMenuLayout = styled.div`
   display: flex;
   position: fixed;
-  z-index: 1000;
+  z-index: 100000;
   top: 0;
   right: 0;
   left: 0;
@@ -25,7 +27,7 @@ const HeaderMenu = styled.div`
   border-radius: 90px;
   max-width: 50%;
   padding: 1em 1.5em;
-  flex-direction: row;
+  flex-direction: column;
   gap: 1em;
 
   backdrop-filter: blur(8px);
@@ -72,48 +74,105 @@ const HeaderButtons = styled.div`
   }
 `;
 
+const HeaderDropdown = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+
+  @media (min-width: ${desktopMinWidth}px) {
+    display: none;
+  }
+`;
+
 export default function GlassHeader() {
   const intl = useIntl();
   const router = useRouter();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const Logo = () => (
+    <img
+      onClick={() => {
+        router.push("/");
+      }}
+      src="/icons/logo.png"
+      style={{
+        height: 25,
+        objectFit: "cover",
+        cursor: "pointer",
+      }}
+    ></img>
+  );
+
+  const MobileBtn = () => (
+    <HeaderDropdown>
+      {isOpen ? (
+        <IoClose
+          onClick={() => {
+            setIsOpen(false);
+          }}
+          color={MyColors.green}
+          size={24}
+        />
+      ) : (
+        <IoMenu
+          onClick={() => {
+            setIsOpen(true);
+          }}
+          color={MyColors.green}
+          size={24}
+        />
+      )}
+    </HeaderDropdown>
+  );
+
+  const Routes = () => (
+    <>
+      <TextStyle.HeaderMenuText
+        onClick={() => {
+          router.push("/");
+          setIsOpen(false);
+        }}
+      >
+        {intl.formatMessage({ id: "main" })}
+      </TextStyle.HeaderMenuText>
+
+      <TextStyle.HeaderMenuText
+        onClick={() => {
+          router.push("/#products");
+          setIsOpen(false);
+        }}
+      >
+        {intl.formatMessage({ id: "products" })}
+      </TextStyle.HeaderMenuText>
+      <TextStyle.HeaderMenuText
+        onClick={() => {
+          router.push("/aboutus");
+          setIsOpen(false);
+        }}
+      >
+        {intl.formatMessage({ id: "about" })}
+      </TextStyle.HeaderMenuText>
+    </>
+  );
+
+  const DesktopBtns = () => (
+    <HeaderButtons>
+      <Routes></Routes>
+    </HeaderButtons>
+  );
+
   return (
     <HeaderMenuLayout>
-      <HeaderMenu>
-        <img
-          onClick={() => {
-            router.push("/");
-          }}
-          src="/icons/logo.png"
-          style={{
-            height: 25,
-            objectFit: "cover",
-            cursor: "pointer",
-          }}
-        ></img>
-        <HeaderButtons>
-          <TextStyle.HeaderMenuText
-            onClick={() => {
-              router.push("/");
-            }}
-          >
-            {intl.formatMessage({ id: "main" })}
-          </TextStyle.HeaderMenuText>
-
-          <TextStyle.HeaderMenuText
-            onClick={() => {
-              router.push("/#products");
-            }}
-          >
-            {intl.formatMessage({ id: "products" })}
-          </TextStyle.HeaderMenuText>
-          <TextStyle.HeaderMenuText
-            onClick={() => {
-              router.push("/aboutus");
-            }}
-          >
-            {intl.formatMessage({ id: "about" })}
-          </TextStyle.HeaderMenuText>
-        </HeaderButtons>
+      <HeaderMenu style={{ borderRadius: isOpen ? 30 : undefined }}>
+        <div style={{ display: "flex", gap: "1em" }}>
+          <Logo></Logo>
+          <MobileBtn></MobileBtn>
+          <DesktopBtns></DesktopBtns>
+        </div>
+        {isOpen && <Routes></Routes>}
       </HeaderMenu>
+
       <div
         style={{
           position: "fixed",

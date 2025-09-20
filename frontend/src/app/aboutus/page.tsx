@@ -26,7 +26,7 @@ export default function AboutUsPage() {
       <EcosystemBlock></EcosystemBlock>
       <MissionBlock></MissionBlock>
       <OurValuesBlock></OurValuesBlock>
-      <FaqBlock></FaqBlock>
+      <FaqBlock items={[]}></FaqBlock>
       <Footer></Footer>
     </PageContainer>
   );

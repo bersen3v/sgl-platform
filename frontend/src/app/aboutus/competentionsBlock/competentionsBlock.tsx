@@ -58,7 +58,7 @@ export default function CompetentionsBlock() {
         </TextStyle.ProductHeader>
         <ProductsLayout>
           <ProductRoadTile
-            header={"Разработка и внедрение программного обеспечения"}
+            header={intl.formatMessage({ id: "service1Header" })}
             onClick={() => {
               router.push("/search");
             }}
@@ -67,7 +67,7 @@ export default function CompetentionsBlock() {
           ></ProductRoadTile>
 
           <ProductRoadTile
-            header={"Техническая поддержка и развитие цифровых решений"}
+            header={intl.formatMessage({ id: "service2Header" })}
             onClick={() => {
               router.push("/search");
             }}
@@ -76,7 +76,7 @@ export default function CompetentionsBlock() {
           ></ProductRoadTile>
 
           <ProductRoadTile
-            header={"Интеграция и модификация продуктов под потребности рынка"}
+            header={intl.formatMessage({ id: "service3Header" })}
             onClick={() => {
               router.push("https://sgl.one/");
             }}
@@ -85,9 +85,7 @@ export default function CompetentionsBlock() {
           ></ProductRoadTile>
 
           <ProductRoadTile
-            header={
-              "Коммерциализация программных продуктов и сервисов, включая размещение платного контента и продажу дополнительных функций"
-            }
+            header={intl.formatMessage({ id: "service4Header" })}
             onClick={() => {
               router.push("https://sgl.one/");
             }}

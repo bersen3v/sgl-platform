@@ -16,10 +16,8 @@ export default function MissionBlock() {
   return (
     <BlockContainer>
       <MissionBox
-        header={"Наша миссия"}
-        text={
-          "Мы стремимся формировать будущее киберспорта, создавая современные IT-решения и объединяя игроков, зрителей и бизнес на одной платформе. Наша цель – развивать индустрию киберспорта в регионе и на международном уровне, обеспечивая новые возможности для роста, сотрудничества и монетизации."
-        }
+        header={intl.formatMessage({ id: "missionHeader" })}
+        text={intl.formatMessage({ id: "missionText" })}
       ></MissionBox>
     </BlockContainer>
   );

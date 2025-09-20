@@ -1,25 +1,23 @@
 import { styled } from "styled-components";
-import { AuroraEffect } from "../components/auroraEffect";
+
 import { TextStyle } from "@/shared/styles/MyTypography/textStyles";
-import CustomBlackButton from "../components/customBlackButton";
+
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { SplitText } from "gsap/dist/SplitText";
-import GradientBubbles from "../components/bubbles";
+
 import { useIntl } from "react-intl";
 import { scrollToSection } from "@/shared/tools/scrollToSection";
-import { useRouter } from "next/navigation";
 
 const FirstBlockContainer = styled.div`
   display: flex;
-  padding: 2.5em;
+
   justify-content: center;
   flex-direction: column;
   align-items: center;
   gap: 1.5em;
   /* height: 60vh; */
-  padding-top: 10em;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 
   position: relative;
   overflow: hidden;
@@ -34,11 +32,10 @@ const ContentWrapper = styled.div`
   gap: 1.2em;
 `;
 
-export default function HeaderBlock() {
+export default function ContactusHeader() {
   const headingRef = useRef(null);
   const paragraphRef = useRef(null);
   const intl = useIntl();
-  const router = useRouter();
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -57,7 +54,6 @@ export default function HeaderBlock() {
         stagger: 0.02,
       });
 
-      // Анимация для параграфа с переносом целых слов
       gsap.set(paragraphRef.current, { opacity: 0.5 });
       const paragraphSplit = new SplitText(paragraphRef.current, {
         type: "words",
@@ -76,18 +72,10 @@ export default function HeaderBlock() {
   return (
     <>
       <FirstBlockContainer>
-        <GradientBubbles></GradientBubbles>
         <ContentWrapper>
-          <TextStyle.Header ref={headingRef}>
-            {intl.formatMessage({ id: "block1header" })}
-          </TextStyle.Header>
           <TextStyle.Header2 ref={paragraphRef}>
-            {intl.formatMessage({ id: "block1description" })}
+            Оставьте свои данные и мы свяжемся с вами
           </TextStyle.Header2>
-          <CustomBlackButton
-            placeholder={"связаться"}
-            onClick={() => router.push("/contactus")}
-          ></CustomBlackButton>
         </ContentWrapper>
       </FirstBlockContainer>
     </>
