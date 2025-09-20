@@ -1,6 +1,6 @@
 "use client";
 import localFont from "next/font/local";
-import "./globals.css";
+import "@/app/globals.css";
 import Head from "next/head";
 
 import { messages } from "../i18n/messges";

@@ -1,6 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  compiler: {
+    styledComponents: true,
+  },
+
   i18n: {
     locales: ["en", "ja"],
     defaultLocale: "en",

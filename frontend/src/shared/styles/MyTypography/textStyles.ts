@@ -113,13 +113,13 @@ const HeaderMenuText = styled.h3`
   text-align: center;
   font-weight: 500;
   cursor: pointer;
-  color: "white";
+  color: ${MyColors.white};
   opacity: 0.5;
   line-height: 1.2;
 
   &:hover {
     opacity: 1;
-    color: white;
+    color: ${MyColors.green};
   }
 `;
 
