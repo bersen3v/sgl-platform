@@ -51,15 +51,17 @@ export default function TeamBlock() {
         <PlayersScroll>
           <PlayersLayout>
             <PlayerCard
-              img={"icons/dmitri_pislevich.jpg"}
-              name={intl.formatMessage({ id: "dmitry_pislevich" })}
-              position={intl.formatMessage({ id: "founder" })}
-            ></PlayerCard>
-            <PlayerCard
               img={"icons/magzhan.jpg"}
               name={intl.formatMessage({ id: "magzhan_myazov" })}
               position={intl.formatMessage({ id: "ceo" })}
             ></PlayerCard>
+
+            <PlayerCard
+              img={"icons/dmitri_pislevich.jpg"}
+              name={intl.formatMessage({ id: "dmitry_pislevich" })}
+              position={intl.formatMessage({ id: "founder" })}
+            ></PlayerCard>
+
             <PlayerCard
               img={"icons/arsentev.jpg"}
               name={intl.formatMessage({ id: "arsentev" })}

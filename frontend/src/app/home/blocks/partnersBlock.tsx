@@ -4,6 +4,9 @@ import { styled } from "styled-components";
 import { FiLink2 } from "react-icons/fi";
 import ProductCard from "../components/productCard";
 import PartnerCard from "../components/partnerCard";
+import { useCallback, useRef } from "react";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { desktopMinWidth } from "@/shared/constants/adaptive";
 
 const BlockContainer = styled.div`
   display: flex;
@@ -39,21 +42,75 @@ const PartnersBlockContainer = styled.div`
   background-color: ${MyColors.dark2};
 `;
 
+const ScrollButtonStyle = styled.div`
+  display: none;
+  padding: 1em;
+  background-color: ${MyColors.dark3};
+  border-radius: 900px;
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid ${MyColors.green};
+  }
+
+  @media (min-width: ${desktopMinWidth}px) {
+    display: flex;
+  }
+`;
+
 export default function PartnersBlock() {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const scrollByContainerWidth = useCallback((direction: "left" | "right") => {
+    const element = scrollContainerRef.current;
+    if (!element) return;
+
+    const containerWidth = element.clientWidth;
+
+    element.scrollTo({
+      left:
+        direction === "left"
+          ? element.scrollLeft - containerWidth
+          : element.scrollLeft + containerWidth,
+      behavior: "smooth",
+    });
+  }, []);
+
   return (
     <PartnersBlockContainer>
-      <TextStyle.ProductHeader
-        style={{
-          paddingLeft: "0.5em",
-          paddingTop: "0.2em",
-          fontWeight: 500,
-          padding: "2em",
-          paddingBottom: 0,
-        }}
-      >
-        Партнеры
-      </TextStyle.ProductHeader>
-      <BlockContainer>
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <TextStyle.ProductHeader
+          style={{
+            paddingLeft: "0.5em",
+            paddingTop: "0.2em",
+            fontWeight: 500,
+            padding: "2em",
+            paddingBottom: 0,
+          }}
+        >
+          Партнеры
+        </TextStyle.ProductHeader>
+        <div
+          style={{
+            gap: "0.5em",
+            display: "flex",
+            padding: "2em",
+            paddingBottom: 0,
+          }}
+        >
+          <ScrollButtonStyle onClick={() => scrollByContainerWidth("left")}>
+            <FaArrowLeft />
+          </ScrollButtonStyle>
+          <ScrollButtonStyle onClick={() => scrollByContainerWidth("right")}>
+            <FaArrowRight />
+          </ScrollButtonStyle>
+        </div>
+      </div>
+
+      {/* <div onClick={() => scrollByContainerWidth("left")}>left</div>
+      <div onClick={() => scrollByContainerWidth("right")}>right</div> */}
+
+      <BlockContainer ref={scrollContainerRef}>
         <PlayersScroll>
           <PlayersLayout>
             <PartnerCard

@@ -71,14 +71,14 @@ export default function Footer() {
             size={32}
             color={MyColors.green}
             onClick={() => {
-              router.push("https://wa.me/87764199901");
+              router.push("https://wa.me/77764199901");
             }}
           />
         </div>
         <div style={{ height: "5em" }}></div>
         <div style={{ display: "flex", flexDirection: "column", gap: "0.6em" }}>
           <TextStyle.ProductText style={{ textAlign: "right" }}>
-            {intl.formatMessage({ id: "too" })}
+            {intl.formatMessage({ id: "too" })} 2025
           </TextStyle.ProductText>
 
           <a href="/companyCard.txt" download>

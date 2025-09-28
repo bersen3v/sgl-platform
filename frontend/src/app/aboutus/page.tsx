@@ -11,6 +11,7 @@ import EcosystemBlock from "./ecosystem/ecosystemBlock";
 import MissionBlock from "./missionBlock/missionBlock";
 import OurValuesBlock from "./ourValuesBlock/ourValuesBlock";
 import Footer from "../home/blocks/footer";
+import CompanyInfo from "./companyCard/companyCard";
 
 const PageContainer = styled.div`
   background-color: ${MyColors.dark1};
@@ -27,7 +28,8 @@ export default function AboutUsPage() {
       <EcosystemBlock></EcosystemBlock>
       <MissionBlock></MissionBlock>
       <OurValuesBlock></OurValuesBlock>
-      <FaqBlock items={[]}></FaqBlock>
+      <CompanyInfo></CompanyInfo>
+      {/* <FaqBlock items={[]}></FaqBlock> */}
       <Footer></Footer>
     </PageContainer>
   );

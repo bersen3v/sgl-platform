@@ -291,6 +291,20 @@ export const messages = {
     userpolicy: "User Agreement",
     productSite: "product webite",
     ourcompetentions: "Our competencies",
+
+    companyInfo: "Company Information",
+    fullName: "Full Name",
+    shortName: "Short Name",
+    bin: "BIN",
+    registrationDate: "Registration Date",
+    director: "Director",
+    location: "Location",
+    address:
+      "Republic of Kazakhstan, Almaty, Yermensai district, Zhangir khan street, building 1, index 050000",
+    fullNameValue: "Limited Liability Partnership «SGL»",
+    shortNameValue: "LLP «SGL»",
+    registrationDateValue: "April 22, 2022",
+    directorValue: "Myazov Magzhan Talgatuly",
   },
   [LOCALES.RUSSIAN]: {
     //home
@@ -380,7 +394,7 @@ export const messages = {
     shukanov: "Артур Шуканов",
     prmanager: "PR-менеджер",
     developer: "Разработчик",
-    founder: "Фаундер",
+    founder: "Учредитель",
     prBlockHeader: "организуем и сопровождаем киберспортивные события",
     prBlockDescription:
       "продаём права на киберспортивные события и обеспечиваем полную поддержку трансляций",
@@ -435,7 +449,7 @@ export const messages = {
       "Да, мы предоставляем аналитику в режиме реального времени — ключевые события, статистику игроков и команд.",
     faq2Question: "Какие данные входят в вашу аналитику?",
     faq2Answer:
-      "Мы собираем и структурируем игровые метрики (киллы, экономика, контроль карты, процент выигранных раундов.",
+      "Мы собираем и структурируем игровые метрики (киллы, экономика, контроль карты, процент выигранных раундов).",
     faq3Question: "Могу ли я интегрировать вашу аналитику через API?",
     faq3Answer:
       "Да, мы предоставляем API для интеграции аналитики на платформы, медиасервисы и партнерские сайты.",
@@ -583,6 +597,20 @@ export const messages = {
     userpolicy: "Пользовательское соглашение",
     productSite: "сайт продукта",
     ourcompetentions: "Наши компетенции",
+
+    companyInfo: "Информация о компании",
+    fullName: "Полное наименование",
+    shortName: "Краткое наименование",
+    bin: "БИН",
+    registrationDate: "Дата регистрации",
+    director: "Руководитель",
+    location: "Местонахождение",
+    address:
+      "Республика Казахстан, г. Алматы, мкр. Ерменсай, ул. Жангир хана, д. 1, индекс 050000",
+    fullNameValue: "Товарищество с ограниченной ответственностью «СГЛ»",
+    shortNameValue: "ТОО «СГЛ»",
+    registrationDateValue: "22 апреля 2022 года",
+    directorValue: "Мязов Магжан Талгатұлы",
   },
   [LOCALES.KAZAKH]: {
     //home
@@ -877,5 +905,19 @@ export const messages = {
     userpolicy: "Пайдаланушы келісімі",
     productSite: "Өнімнің веб-сайты",
     ourcompetentions: "Біздің құзыреттеріміз",
+
+    companyInfo: "Компания туралы ақпарат",
+    fullName: "Толық атауы",
+    shortName: "Қысқаша атауы",
+    bin: "БСН",
+    registrationDate: "Тіркеу күні",
+    director: "Басшысы",
+    location: "Орналасқан жері",
+    address:
+      "Қазақстан Республикасы, Алматы қ., Ерменсай шағы, Жәңгір хан көш., 1-үй, индекс 050000",
+    fullNameValue: "«СГЛ» жауапкершілігі шектеулі серіктестігі",
+    shortNameValue: "«СГЛ» ЖШС",
+    registrationDateValue: "22 сәуір 2022 жыл",
+    directorValue: "Мязов Мағжан Талғатұлы",
   },
 };
