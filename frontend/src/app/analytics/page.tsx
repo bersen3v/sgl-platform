@@ -12,6 +12,7 @@ import ProductDisciplinesBlock from "./components/disciplinesBlock/productDiscip
 import { useIntl } from "react-intl";
 import { Item10 } from "../home/components/3d/item10";
 import Footer from "../home/blocks/footer";
+import router, { useRouter } from "next/navigation";
 
 const PageContainer = styled.div`
   background-color: ${MyColors.dark1};
@@ -21,13 +22,16 @@ const PageContainer = styled.div`
 
 export default function AnalyticsPage() {
   const intl = useIntl();
+  const router = useRouter();
   return (
     <PageContainer>
       <GlassHeader></GlassHeader>
       <ProductHeaderBlock
         productName={intl.formatMessage({ id: "analytics" })}
         productDescription={intl.formatMessage({ id: "analyticsDescription" })}
-        onClick={() => {}}
+        onClick={() => {
+          router.push("https://sgl-analytics.kz/csgo-matches");
+        }}
         obj3d={<Item10></Item10>}
       ></ProductHeaderBlock>
       <ProductDescriptionBlock

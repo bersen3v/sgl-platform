@@ -4,6 +4,9 @@ import { MyColors } from "@/shared/styles";
 import { desktopMinWidth } from "@/shared/constants/adaptive";
 import VideoPreview from "../components/videoPreview";
 import { useIntl } from "react-intl";
+import Video from "next-video";
+import sglVideo from "/videos/sgl.mp4.json";
+import analyticsVideo from "/videos/analytics.mp4.json";
 
 const BlockContainer = styled.div`
   position: relative;
@@ -22,7 +25,8 @@ const BlockContainer = styled.div`
   /* Для десктопов - уже */
   @media (min-width: ${desktopMinWidth}px) {
     padding-left: 4em;
-    flex-direction: row;
+    padding-right: 4em;
+    flex-direction: column;
   }
 
   margin-bottom: 2em;
@@ -37,16 +41,37 @@ const TextContainer = styled.div`
   flex-direction: column;
   flex: 1;
   gap: 1em;
+  @media (min-width: ${desktopMinWidth}px) {
+    max-width: 50%;
+  }
 `;
 
 const AnimationContainer = styled.div`
+  display: flex;
   flex: 1;
+  flex-direction: column;
+  @media (min-width: ${desktopMinWidth}px) {
+    flex-direction: row;
+  }
+  gap: 1.5em;
 `;
 
 export default function MotivationBlock() {
   const intl = useIntl();
   return (
     <BlockContainer>
+      <AnimationContainer>
+        <VideoPreview
+          photo={"/organizationPreview.png"}
+          video={sglVideo}
+        ></VideoPreview>
+        <VideoPreview
+          photo={"/analyticsPreview.png"}
+          video={analyticsVideo}
+        ></VideoPreview>
+        {/* <VideoPreview></VideoPreview> */}
+      </AnimationContainer>
+
       <TextContainer>
         <TextStyle.ProductHeader>
           {intl.formatMessage({ id: "block2first" })}
@@ -60,10 +85,6 @@ export default function MotivationBlock() {
           {intl.formatMessage({ id: "block2third" })}
         </TextStyle.Header2Left>
       </TextContainer>
-
-      <AnimationContainer>
-        <VideoPreview></VideoPreview>
-      </AnimationContainer>
     </BlockContainer>
   );
 }

@@ -1,4 +1,7 @@
 import { MyColors } from "@/shared/styles";
+import Video from "next-video";
+import { Asset } from "next-video/dist/assets.js";
+import { useRef, useState } from "react";
 import { FaPlay } from "react-icons/fa";
 import { styled } from "styled-components";
 
@@ -38,19 +41,42 @@ const PlayButton = styled.div`
   cursor: pointer;
 `;
 
-export default function VideoPreview() {
+export default function VideoPreview({
+  photo,
+  video,
+}: {
+  photo: string;
+  video: Asset;
+}) {
+  const [play, setPlay] = useState(true);
+  const videoRef = useRef(null);
   return (
     <VideoPreviewContainer>
-      <img src={"/sglvideopreview.jpg"} style={{ width: "100%" }}></img>
-      <PlayButtonContainer>
-        <PlayButton>
-          <FaPlay
-            color={MyColors.dark1}
-            size={"1.5em"}
-            style={{ paddingLeft: "0.2em" }}
-          />
-        </PlayButton>
-      </PlayButtonContainer>
+      {play ? (
+        <Video
+          poster={photo}
+          ref={videoRef}
+          src={video}
+          // style={{ width: "100%" }}
+        />
+      ) : (
+        <>
+          <img src={photo} style={{ width: "100%" }}></img>
+          <PlayButtonContainer>
+            <PlayButton
+              onClick={() => {
+                setPlay(true);
+              }}
+            >
+              <FaPlay
+                color={MyColors.dark1}
+                size={"1.5em"}
+                style={{ paddingLeft: "0.2em" }}
+              />
+            </PlayButton>
+          </PlayButtonContainer>
+        </>
+      )}
     </VideoPreviewContainer>
   );
 }

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev --turbopack & npx next-video sync -w",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -22,6 +22,7 @@
     "gsap": "^3.13.0",
     "maath": "^0.10.8",
     "next": "15.3.1",
+    "next-video": "^2.5.0",
     "nodemailer": "^7.0.6",
     "popmotion": "^11.0.5",
     "react": "^19.0.0",
