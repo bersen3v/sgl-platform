@@ -78,10 +78,6 @@ export default function MarketplacePage() {
       <FaqBlock
         items={[
           {
-            question: intl.formatMessage({ id: "marketplaceFaq1Question" }),
-            answer: intl.formatMessage({ id: "marketplaceFaq1Answer" }),
-          },
-          {
             question: intl.formatMessage({ id: "marketplaceFaq2Question" }),
             answer: intl.formatMessage({ id: "marketplaceFaq2Answer" }),
           },
@@ -92,10 +88,6 @@ export default function MarketplacePage() {
           {
             question: intl.formatMessage({ id: "marketplaceFaq4Question" }),
             answer: intl.formatMessage({ id: "marketplaceFaq4Answer" }),
-          },
-          {
-            question: intl.formatMessage({ id: "marketplaceFaq5Question" }),
-            answer: intl.formatMessage({ id: "marketplaceFaq5Answer" }),
           },
           {
             question: intl.formatMessage({ id: "marketplaceFaq6Question" }),

@@ -106,10 +106,6 @@ export default function SupportPage() {
             answer: intl.formatMessage({ id: "supportFaq7Answer" }),
           },
           {
-            question: intl.formatMessage({ id: "supportFaq8Question" }),
-            answer: intl.formatMessage({ id: "supportFaq8Answer" }),
-          },
-          {
             question: intl.formatMessage({ id: "supportFaq9Question" }),
             answer: intl.formatMessage({ id: "supportFaq9Answer" }),
           },

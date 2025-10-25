@@ -86,6 +86,7 @@ export default function CompanyInfo() {
     registrationDate: intl.formatMessage({ id: "registrationDateValue" }),
     director: intl.formatMessage({ id: "directorValue" }),
     address: intl.formatMessage({ id: "address" }),
+    download: intl.formatMessage({ id: "download" }),
   };
 
   return (
@@ -121,6 +122,24 @@ export default function CompanyInfo() {
         <InfoItem>
           <InfoLabel>{intl.formatMessage({ id: "location" })}</InfoLabel>
           <InfoValue>{companyData.address}</InfoValue>
+        </InfoItem>
+
+        <InfoItem>
+          <InfoLabel>{intl.formatMessage({ id: "ustav" })}</InfoLabel>
+          <a href="/toosglrules.pdf" download>
+            <InfoValue style={{ textDecoration: "underline" }}>
+              {companyData.download}
+            </InfoValue>
+          </a>
+        </InfoItem>
+
+        <InfoItem>
+          <InfoLabel>{intl.formatMessage({ id: "astana_member" })}</InfoLabel>
+          <a href="/astanahub_membership.pdf" download>
+            <InfoValue style={{ textDecoration: "underline" }}>
+              {companyData.download}
+            </InfoValue>
+          </a>
         </InfoItem>
       </InfoGrid>
     </CompanyInfoContainer>

@@ -2,21 +2,21 @@ import { LOCALES } from "./locales";
 
 export const messages = {
   [LOCALES.ENGLISH]: {
-    //home
+    download: "Download",
+    astana_member: "Astana Hub participation certificate",
+    ustav: "Company charter",
     team: "Team",
     dmitry_pislevich: "Dmitry Pislevich",
-    magzhan_myazov: "Magzhan Myazov ",
+    magzhan_myazov: "Magzhan Myazov",
     ceo: "CEO",
-    mainTitle: "We provide access to sports and esports event broadcasts",
+    mainTitle: "Providing access to esports event video broadcasts",
     bookingEvents: "Event booking",
     partners: "Partners",
     astana_hub: "Astana Hub",
     acselerator: "Accelerator",
     allOurProjects: "Our other projects",
-    secondTitle: "Turnkey esports tournaments",
-    secondMainButton: "To order",
-
-    // main
+    secondTitle: "End-to-end organization of esports tournaments",
+    secondMainButton: "Order",
     search: "Search",
     more: "More details",
     filters: "Filters",
@@ -28,118 +28,103 @@ export const messages = {
     manager: "Organizer",
     developer: "Developer",
     from: "From",
-    before: "Before",
-    event_dates: "Dates of the event",
-    prize_fond: "The prize fund",
-    noData: "Nothing was found",
+    before: "To",
+    event_dates: "Event dates",
+    prize_fond: "Prize pool",
+    noData: "No data found",
     loading: "Loading",
-
-    // event details
     description: "Description",
-    commercial_proposal: "Commercial Proposal",
-    event_website: "Event Website",
+    commercial_proposal: "Commercial proposal",
+    event_website: "Event website",
     open: "Open",
     link_to_the_broadcast: "Broadcast link",
     copy: "Copy",
     back: "Back",
-
-    // auth
     login: "Login",
     password: "Password",
-    entry: "Sign In",
-
-    // profile
-    my_events: "My Events",
-
-    // commercial proposal
+    entry: "Sign in",
+    my_events: "My events",
     name: "Name",
-    phone_number: "Phone Number",
+    phone_number: "Phone number",
     comment: "Comment",
     send: "Send",
     comproposal_description:
-      "Leave your contact details and a manager will contact you shortly",
-    comproposal_success_title: "Request sent successfully",
+      "Leave your contacts and a manager will contact you shortly",
+    comproposal_success_title: "Application successfully sent",
     comproposal_success_description: "A manager will contact you soon",
-
-    // newmain
     block1header: "organization and digital support of esports tournaments",
     block1description:
-      "we sell rights for esports events and provide full streaming support",
+      "we provide access to esports event video broadcasts and ensure full broadcast support",
     block1button: "contact us",
-    block2first: "For companies that want to develop ahead of time and trends",
+    block2first:
+      "For companies that want to develop, staying ahead of time and trends",
     block2second:
-      "We turn raw video streams into broadcasts ready for user consumption",
+      "We transform raw video streams into broadcasts ready for user consumption",
     block2third:
-      "We conduct real-time event analytics using machine vision solutions",
-
+      "We conduct real-time event analytics using machine vision-based solutions",
     products: "products",
     analytics: "Analytics",
     analyticsDescription:
       "smart real-time video stream analytics trained for specific esports disciplines",
     marketplace: "Marketplace",
     marketplaceDescription:
-      "a platform for convenient buying and selling of rights for major esports events",
+      "platform for convenient buying and selling of access to video broadcasts of major esports events",
     walkingDescription:
-      "full cycle of esports event creation – from event organization to video stream processing",
+      "full cycle of esports event creation - from event organization to working with video streams",
     walking: "Support",
-    arsentev: "Roman Arsentev",
-    shukanov: "Artur Shukanov",
+    arsentev: "Roman Arsentyev",
+    shukanov: "Arthur Shukanov",
     prmanager: "PR Manager",
-    developer: "Developer",
     founder: "Founder",
     prBlockHeader: "we organize and support esports events",
     prBlockDescription:
-      "we sell rights for esports events and provide full streaming support",
-
-    too: "SGL COMPANY",
-
+      "we provide access to esports event video broadcasts and ensure full broadcast support",
+    too: "SGL LLP",
     main: "main",
-    about: "about",
-
+    about: "about us",
     question1: "Do you have licensed rights for broadcasts?",
     answer1:
       "Yes, all rights are confirmed by official agreements with rights holders.",
-    question2: "What does your analytics include?",
+    question2: "What does analytics include?",
     answer2:
-      "Our analytics is an intelligent real-time video stream analysis, trained for specific esports disciplines.",
+      "Our analytics is smart real-time analysis of video streams, trained for specific esports disciplines.",
     question3: "How does your marketplace work?",
     answer3:
-      "It is a platform for convenient buying and selling rights to major esports events.",
-    question4: "What is included in event support?",
+      "It's a platform for convenient buying and selling of access to video broadcasts of major esports events.",
+    question4: "What does event support include?",
     answer4:
-      "The full cycle — from organizing an esports event to working with the video stream.",
+      "Full cycle - from organizing esports events to working with video streams.",
     question5: "For which disciplines is analytics available?",
     answer5:
-      "We support the most popular disciplines — Dota 2, CS2, and others.",
-    question6: "Is it possible to integrate your analytics via API?",
+      "We support the most popular disciplines - Dota 2, CS2 and others.",
+    question6: "Can I integrate your analytics via API?",
     answer6: "Yes, we provide a convenient API for B2B clients.",
     question7: "Do you work with international partners?",
     answer7: "Yes, we have partners in Russia, Serbia, UAE, and Cyprus.",
     question8:
-      "Is it possible to purchase rights for a specific tournament from you?",
+      "Can I purchase access to broadcasts of specific tournaments from you?",
     answer8:
-      "Yes, through the marketplace you can buy rights for the event you are interested in.",
-
+      "Yes, through the marketplace you can purchase access to video broadcasts for events you're interested in.",
     forWhom: "For whom?",
     forWhomText:
-      "Our clients are rights holders of esports media content who need fast and high-quality digitization of matches",
+      "Our clients are rights holders of esports media content who need fast and high-quality match digitization",
     whatWeDo: "What we do?",
     whatWeDoText:
-      "We take a raw video stream as input, automatically process it and deliver a ready set of metrics for esports matches. All in real time",
-    whatBenefits: "What benefits does it bring?",
+      "We take raw video streams as input, automatically process them and output a ready set of esports match metrics. All in real time",
+    whatBenefits: "What benefits does this bring?",
     whatBenefitsText:
-      "No more manual counting of goals, kills and other metrics needed for broadcast. Now this is done by computer vision technologies. Automatically. Without sleep, rest and costly mistakes.",
-    step1Header: "You upload finished video or provide a link to the stream",
+      "No more manual counting of goals, kills and other metrics needed for broadcasts. Now this is done by computer vision technologies. Automatically. Without sleep, rest and costly errors.",
+    step1Header: "You upload ready video or provide a broadcast link",
     step1Text: "We only need your media content. Nothing more!",
     step2Header: "The system processes the video stream",
     step2Text:
-      "Using computer vision algorithms, we immediately obtain the necessary statistics and deliver it as API, JSON or text",
+      "Using computer vision algorithms, we immediately get the necessary statistics and output it as API, JSON or text",
     step3Header: "You receive analytics of your esports event",
     step3Text:
-      "Next, you can use our other services to add custom HUDs to your video stream based on the statistics.",
+      "You can then use our other services to add custom HUDs to your video stream based on the statistics.",
     faq1Question: "Do you have live match analytics?",
     faq1Answer:
-      "Yes, we provide real-time analytics - key events, player and team statistics.",
+      "Yes, we provide analytics in real time - key events, player and team statistics.",
     faq2Question: "What data is included in your analytics?",
     faq2Answer:
       "We collect and structure game metrics (kills, economy, map control, round win percentage).",
@@ -148,129 +133,118 @@ export const messages = {
       "Yes, we provide API for integrating analytics into platforms, media services and partner sites.",
     faq4Question: "Do you support custom reports?",
     faq4Answer:
-      "Of course, we can generate reports according to client requests - from basic summaries to in-depth statistics on players and maps.",
-
+      "Of course, we can generate reports per client request - from basic summaries to in-depth statistics on players and maps.",
     marketplaceForWhom: "For whom?",
     marketplaceForWhomText:
-      "Our clients are esports tournament organizers, promoters, and media holdings that sell or buy broadcasting rights for major competitions.",
+      "Our clients are esports tournament organizers, promoters and media holdings that sell or buy access to video broadcasts of major esports tournaments.",
     marketplaceWhatWeDo: "What we do?",
     marketplaceWhatWeDoText:
-      "We provide a B2B platform with a catalog of broadcasting rights where you can safely buy and sell rights packages for different regions, territories, and platforms using escrow transactions and standard contracts.",
-    marketplaceBenefits: "What benefits does it bring?",
+      "We provide a B2B platform with a catalog of video broadcasts where you can safely sell and buy access packages for different regions, territories and platforms using escrow deals and standard contracts.",
+    marketplaceBenefits: "What benefits does this bring?",
     marketplaceBenefitsText:
-      "Opens new monetization channels, reduces barriers to entering global markets, and speeds up deal closures without legal risks and counterparty search.",
+      "Opens new monetization channels, reduces barriers to global markets and speeds up deal closing without legal risks and counterparty search.",
     marketplaceStep1Header:
-      "You list a rights package or choose a suitable one in the catalog",
+      "You place a video broadcast package or select a suitable one in the catalog",
     marketplaceStep1Text:
-      "Specify conditions: exclusivity, platforms, territory, and validity period. Filters help quickly find the right event.",
+      "Specify conditions: exclusivity, platforms, territory and validity period. Filters help quickly find the right event.",
     marketplaceStep2Header:
-      "The system ensures secure transactions through escrow and standard contracts",
+      "The system ensures secure deals through escrow and standard contracts",
     marketplaceStep2Text:
-      "The buyer reserves funds, the seller transfers rights - the platform guarantees fulfillment of conditions without risks for parties.",
+      "Buyer reserves funds, seller provides access - the platform guarantees fulfillment of conditions without risks for parties.",
     marketplaceStep3Header:
-      "You receive broadcasting rights or profit from their sale",
+      "You get access to video broadcasts or profit from their sale",
     marketplaceStep3Text:
-      "After deal confirmation, the buyer receives a license, and the seller receives payment. Can be scaled to new markets and audiences.",
-    marketplaceFaq1Question:
-      "What types of broadcasting rights can be sold on the platform?",
-    marketplaceFaq1Answer:
-      "We support the sale of exclusive and non-exclusive rights, including regional exclusives, platform-specific rights (YouTube, Twitch), and fractional rights packages for different territories.",
+      "After deal confirmation, the buyer gets access to video broadcasts, and the seller receives payment. Can be scaled to new markets and audiences.",
     marketplaceFaq2Question: "How is transaction security ensured?",
     marketplaceFaq2Answer:
-      "All financial operations go through an escrow service: funds are blocked until rights transfer confirmation. We also provide standard legal contracts to minimize risks.",
+      "All financial operations go through escrow service: funds are blocked until access to video broadcast is confirmed. We also provide standard legal contracts to minimize risks.",
     marketplaceFaq3Question: "What is the transaction commission?",
     marketplaceFaq3Answer:
-      "The platform commission is [X]% of the transaction amount. All commissions are transparent and indicated before operation confirmation.",
-    marketplaceFaq4Question: "How does the rights purchase process work?",
+      "Platform commission is [X]% of the transaction amount. All commissions are transparent and indicated before operation confirmation.",
+    marketplaceFaq4Question:
+      "How does the process of getting access to video broadcast work?",
     marketplaceFaq4Answer:
-      "Choose a rights package in the catalog → reserve funds through escrow → sign an electronic contract → receive rights after seller confirmation → funds are released to the seller.",
-    marketplaceFaq5Question: "Can rights be sold for a specific region?",
-    marketplaceFaq5Answer:
-      "Yes, you can list rights packages for specific countries, regions, or even cities, with the possibility of setting exclusivity for each territory.",
+      "Select a video broadcast package in the catalog → reserve funds through escrow → sign electronic contract → get access to broadcasts after seller confirmation → funds are unlocked to seller.",
     marketplaceFaq6Question: "Which esports disciplines are supported?",
     marketplaceFaq6Answer:
-      "All major ones: CS:GO, Dota 2, League of Legends, Valorant, StarCraft II, Overwatch, and others. You can filter events by discipline in the catalog.",
+      "All major ones: CS:GO, Dota 2, League of Legends, Valorant, StarCraft II, Overwatch and others. You can filter events by disciplines in the catalog.",
     marketplaceFaq7Question: "How is seller reliability verified?",
     marketplaceFaq7Answer:
-      "We use a rating and review system, verify companies' legal status, and provide access to each seller's completed transaction history.",
+      "We use rating and review system, verify companies' legal status and provide access to each seller's completed transactions history.",
     marketplaceFaq8Question: "What to do in case of disputes?",
     marketplaceFaq8Answer:
-      "Our support service acts as an arbitrator in disputed situations. All transactions are accompanied by legal contracts, and the escrow service guarantees financial protection.",
-    marketplaceFaq9Question: "Can I buy rights for only one platform?",
+      "Our support service acts as arbitrator in disputes. All transactions are accompanied by legal contracts, and escrow service guarantees financial protection.",
+    marketplaceFaq9Question:
+      "Can I get access to video broadcasts only for specific platforms?",
     marketplaceFaq9Answer:
-      "Yes, you can buy rights for specific platforms (e.g., only for Twitch or YouTube), as well as combine different platforms in one package.",
+      "Yes, you can get access to video broadcasts for specific platforms (for example, only for Twitch or YouTube), as well as combine different platforms in one package.",
     marketplaceFaq10Question:
-      "How quickly are rights transferred after a deal?",
+      "How quickly is access to video broadcasts provided after transaction?",
     marketplaceFaq10Answer:
-      "After payment confirmation through escrow, rights transfer and necessary materials occur within 24 hours. An expedited mode is available for urgent deals.",
-
+      "After payment confirmation through escrow, access to video broadcasts is provided within 24 hours. For urgent transactions, expedited mode is available.",
     supportForWhom: "For whom?",
     supportForWhomText:
-      "Our clients are esports event organizers, brands, and rights holders who want to host a professional turnkey event without operational complexities.",
+      "Our clients are esports event organizers, brands and rights holders who want to conduct professional events 'turnkey' without operational complexities.",
     supportWhatWeDo: "What we do?",
     supportWhatWeDoText:
-      "We provide a full cycle of organization and production: from logistics and technical preparation to broadcast direction, graphic design, and post-production.",
-    supportBenefits: "What benefits does it bring?",
+      "We provide full cycle of organization and production: from logistics and technical preparation to broadcast direction, graphic design and post-production.",
+    supportBenefits: "What benefits does this bring?",
     supportBenefitsText:
-      "Allows you to focus on content and viewers, not technical details. Professional broadcast quality, risk reduction, and resource savings.",
+      "Allows focusing on content and viewers, not technical details. Professional broadcast quality, risk reduction and resource savings.",
     supportStep1Header: "We discuss tasks and create a plan",
     supportStep1Text:
-      "We conduct a briefing, agree on regulations, and define goals and key metrics for your event.",
+      "We conduct briefing, agree on regulations, determine goals and key metrics of your event.",
     supportStep2Header: "We organize and conduct the broadcast",
     supportStep2Text:
-      "We set up equipment, provide multi-camera shooting, sound, graphics, and conduct the broadcast in real time.",
+      "We set up equipment, provide multi-camera filming, sound, graphics and conduct live broadcast.",
     supportStep3Header: "We process and edit content",
     supportStep3Text:
-      "We create clips, highlights, teasers, and prepare materials for rights holders. We assist with monetization of broadcasting rights.",
-    supportFaq1Question: "What stages of the event do you cover?",
+      "We create clips, highlights, teasers and prepare materials for rights holders. We help with monetization of broadcast rights.",
+    supportFaq1Question: "Which event stages do you cover?",
     supportFaq1Answer:
       "All: pre-production (planning, logistics), production (broadcast, graphics, sound) and post-production (editing, clips, reporting).",
     supportFaq2Question: "Can you work with our existing equipment?",
     supportFaq2Answer:
-      "Yes, we adapt to your infrastructure or provide our own equipment - depending on the tasks and technical requirements.",
-    supportFaq3Question: "Do you create graphics and HUD for broadcasts?",
+      "Yes, we adapt to your infrastructure or provide our equipment - depending on tasks and technical requirements.",
+    supportFaq3Question: "Do you create graphics and HUD for broadcast?",
     supportFaq3Answer:
-      "Yes, we create custom overlays, HUDs, lower thirds, and other graphic design that matches your brand style.",
+      "Yes, we create custom overlays, HUD, lower thirds and other graphic design matching your brand style.",
     supportFaq4Question: "How do you ensure broadcast stability?",
     supportFaq4Answer:
-      "We duplicate critical equipment, monitor quality in real time, and have protocols for quick response to failures.",
+      "We duplicate critical equipment, monitor quality in real time and have rapid response protocols for failures.",
     supportFaq5Question:
       "Do you work with multistream (multiple platforms simultaneously)?",
     supportFaq5Answer:
-      "Yes, we set up simultaneous broadcasting to YouTube, Twitch, VK, OTT platforms, and other channels with adaptation for each platform.",
-    supportFaq6Question: "Do you provide editing after the broadcast?",
+      "Yes, we set up simultaneous broadcast to YouTube, Twitch, VK, OTT platforms and other channels with adaptation for each platform.",
+    supportFaq6Question: "Do you provide editing after broadcast?",
     supportFaq6Answer:
-      "Yes, we create highlight reels, clips for social media, full match recordings, and prepare materials for partners.",
-    supportFaq7Question: "How is coordination during the event handled?",
+      "Yes, we create highlights, clips for social networks, full match recordings and prepare materials for partners.",
+    supportFaq7Question: "How is coordination during the event?",
     supportFaq7Answer:
       "We assign a project manager who coordinates all processes and stays in touch with you at all stages.",
-    supportFaq8Question: "Do you help with selling broadcasting rights?",
-    supportFaq8Answer:
-      "Yes, we integrate with the rights marketplace: we help package and list rights, and ensure technical readiness for buyers.",
-    supportFaq9Question: "What broadcast formats do you support?",
+    supportFaq9Question: "Which broadcast formats do you support?",
     supportFaq9Answer:
-      "We work with all: LIVE streams, delayed broadcast, VOD content, adaptation to different codecs and resolutions.",
+      "We work with any: LIVE streams, delayed broadcast, VOD content, adaptation for different codecs and resolutions.",
     supportFaq10Question: "How is pricing structured?",
     supportFaq10Answer:
-      "Depending on the scale of the event: turnkey package offers or individual services. After the briefing, we prepare a detailed estimate.",
-
+      "Depending on event scale: package 'turnkey' offers or separate services. After briefing we prepare detailed estimate.",
     companyName: "SGL LLP",
     companyDescription:
-      "participant of the international technology park Astana Hub and developer of the innovative project «SGL Esports Platform»",
+      "participant of the international technology park Astana Hub and developer of the innovative project 'SGL Esports Platform'",
     service1Header: "Software development and implementation",
     service2Header: "Technical support and development of digital solutions",
     service3Header:
-      "Integration and modification of products to meet market needs",
+      "Integration and modification of products according to market needs",
     service4Header:
       "Commercialization of software products and services, including placement of paid content and sale of additional features",
     ecosystemTitle:
-      "SGL Esports Holding is an ecosystem that unites key areas of esports",
+      "SGL Esports Holding is an ecosystem uniting key esports directions",
     ecosystemService1: "Match analytics",
-    ecosystemService2: "Rights sales",
+    ecosystemService2: "Providing access to video broadcasts",
     ecosystemService3: "Tournament organization",
     missionHeader: "Our mission",
     missionText:
-      "We strive to shape the future of esports by creating modern IT solutions and uniting players, viewers and businesses on a single platform. Our goal is to develop the esports industry in the region and internationally, providing new opportunities for growth, collaboration and monetization.",
+      "We strive to shape the future of esports by creating modern IT solutions and uniting players, viewers and business on one platform. Our goal is to develop the esports industry in the region and internationally, providing new opportunities for growth, cooperation and monetization.",
     value1Header: "[ Innovation ]",
     value1Text:
       "we implement modern technologies and strive to be one step ahead.",
@@ -283,37 +257,38 @@ export const messages = {
     value4Header: "[ Development ]",
     value4Text:
       "we contribute to the growth of esports as a mass phenomenon and professional industry.",
-
     howitworks: "How it works?",
     disciplines: "Disciplines",
-    companycard: "Company Card",
-    confpolicy: "Privacy Policy",
-    userpolicy: "User Agreement",
-    productSite: "product webite",
+    companycard: "Company card",
+    confpolicy: "Privacy policy",
+    userpolicy: "User agreement",
+    productSite: "product website",
     ourcompetentions: "Our competencies",
-
-    companyInfo: "Company Information",
-    fullName: "Full Name",
-    shortName: "Short Name",
+    companyInfo: "Company information",
+    fullName: "Full name",
+    shortName: "Short name",
     bin: "BIN",
-    registrationDate: "Registration Date",
+    registrationDate: "Registration date",
     director: "Director",
     location: "Location",
     address:
       "Republic of Kazakhstan, Almaty, Yermensai district, Zhangir khan street, building 1, index 050000",
-    fullNameValue: "Limited Liability Partnership «SGL»",
-    shortNameValue: "LLP «SGL»",
+    fullNameValue: "SGL Limited Liability Partnership",
+    shortNameValue: "SGL LLP",
     registrationDateValue: "April 22, 2022",
     directorValue: "Myazov Magzhan Talgatuly",
   },
   [LOCALES.RUSSIAN]: {
+    download: "Скачать",
+    astana_member: "Свидетельство об участии в Астана Хаб",
+    ustav: "Устав компании",
     //home
     team: "Команда",
     dmitry_pislevich: "Дмитрий Пислевич",
     magzhan_myazov: "Магжан Мязов ",
     ceo: "CEO",
     mainTitle:
-      "Предоставляем доступ к трансляциям спортивных и киберспортивных событий",
+      "Предоставляем доступ к видеотрансляциям киберспортивных событий",
     bookingEvents: "Бронирование событий",
     partners: "Партнеры",
     astana_hub: "Астана Хаб",
@@ -371,7 +346,7 @@ export const messages = {
     block1header:
       "организация и digital-сопровождение киберспортивных турниров",
     block1description:
-      "продаём права на киберспортивные события и обеспечиваем полную поддержку трансляций",
+      "предоставляем доступ к видеотрансляциям киберспортивных событий и обеспечиваем полную поддержку трансляций",
     block1button: "связаться",
     block2first:
       "Для компаний, которые хотят развиваться, опережая время и тренды",
@@ -386,7 +361,7 @@ export const messages = {
       "умная realtime аналитика видеопотока, обученная под отдельные киберспортивные дисциплины",
     marketplace: "Маркетплейс",
     marketplaceDescription:
-      "площадка для удобной продажи и покупки прав на крупнейшие киберспортивные события",
+      "площадка для удобной продажи и покупки доступа к видеотрансляциям крупнейших киберспортивных событий",
     walkingDescription:
       "полный цикл создания киберспортивного мероприятия - от организации события до работы над видеопотоком",
     walking: "Сопровождение",
@@ -397,7 +372,7 @@ export const messages = {
     founder: "Учредитель",
     prBlockHeader: "организуем и сопровождаем киберспортивные события",
     prBlockDescription:
-      "продаём права на киберспортивные события и обеспечиваем полную поддержку трансляций",
+      "предоставляем доступ к видеотрансляциям киберспортивных событий и обеспечиваем полную поддержку трансляций",
     too: 'ТОО "СГЛ"',
 
     main: "главная",
@@ -411,7 +386,7 @@ export const messages = {
       "Наша аналитика — это умный realtime-анализ видеопотока, обученный под отдельные киберспортивные дисциплины.",
     question3: "Как работает ваш маркетплейс?",
     answer3:
-      "Это площадка для удобной продажи и покупки прав на крупнейшие киберспортивные события.",
+      "Это площадка для удобной продажи и покупки доступа к видеотрансляциям крупнейших киберспортивных событий.",
     question4: "Что входит в сопровождение мероприятий?",
     answer4:
       "Полный цикл — от организации киберспортивного события до работы с видеопотоком.",
@@ -422,9 +397,10 @@ export const messages = {
     answer6: "Да, мы предоставляем удобный API для B2B-клиентов.",
     question7: "Работаете ли вы с международными партнёрами?",
     answer7: "Да, у нас есть партнёры в России, Сербии, ОАЭ, и на Кипре.",
-    question8: "Можно ли приобрести у вас права на определённый турнир?",
+    question8:
+      "Можно ли приобрести у вас доступ к видеотрансляции определённого турнира?",
     answer8:
-      "Да, через маркетплейс вы можете купить права на интересующее вас событие.",
+      "Да, через маркетплейс вы можете приобрести доступ к видеотрансляциям на интересующее вас событие.",
 
     forWhom: "Для кого?",
     forWhomText:
@@ -459,42 +435,36 @@ export const messages = {
 
     marketplaceForWhom: "Для кого?",
     marketplaceForWhomText:
-      "Наши клиенты — организаторы киберспортивных турниров, промоутеры и медиахолдинги, которые продают или покупают права на трансляцию крупных соревнований.",
+      "Наши клиенты — организаторы киберспортивных турниров, промоутеры и медиахолдинги, которые продают или покупают доступ к видеотрансляциям  крупных киберспортивных турниров.",
     marketplaceWhatWeDo: "Что мы делаем?",
     marketplaceWhatWeDoText:
-      "Предоставляем B2B-платформу с каталогом прав на трансляцию, где можно безопасно продавать и покупать пакеты прав для разных регионов, территорий и платформ с помощью escrow-сделок и типовых контрактов.",
+      "Предоставляем B2B-платформу с каталогом видеотрансляций, где можно безопасно продавать и покупать пакеты доступа к трансляциям для разных регионов, территорий и платформ с помощью escrow-сделок и типовых контрактов.",
     marketplaceBenefits: "Какую пользу это приносит?",
     marketplaceBenefitsText:
       "Открывает новые каналы монетизации, снижает барьеры выхода на глобальные рынки и ускоряет заключение сделок без юридических рисков и поиска контрагентов.",
     marketplaceStep1Header:
-      "Вы размещаете пакет прав или выбираете подходящий в каталоге",
+      "Вы размещаете пакет видеотрансляций или выбираете подходящий в каталоге",
     marketplaceStep1Text:
       "Указываете условия: эксклюзивность, платформы, территорию и срок действия. Фильтры помогают быстро найти нужное событие.",
     marketplaceStep2Header:
       "Система обеспечивает безопасную сделку через escrow и типовые контракты",
     marketplaceStep2Text:
-      "Покупатель резервирует средства, продавец передаёт права — платформа гарантирует выполнение условий без рисков для сторон.",
+      "Покупатель резервирует средства, продавец предоставляет доступ — платформа гарантирует выполнение условий без рисков для сторон.",
     marketplaceStep3Header:
-      "Вы получаете права на трансляцию или прибыль от их продажи",
+      "Вы получаете доступ к видеотрансляциям или прибыль от их продажи",
     marketplaceStep3Text:
-      "После подтверждения сделки покупатель получает лицензию, а продавец — оплату. Можно масштабировать на новые рынки и аудитории.",
-    marketplaceFaq1Question:
-      "Какие типы прав на трансляцию можно продавать на платформе?",
-    marketplaceFaq1Answer:
-      "Мы поддерживаем продажу эксклюзивных и неэксклюзивных прав, включая региональные эксклюзивы, права под конкретные платформы (YouTube, Twitch) и дробные пакеты прав для разных территорий.",
+      "После подтверждения сделки покупатель получает доступ к видеотрансляции, а продавец — оплату. Можно масштабировать на новые рынки и аудитории.",
     marketplaceFaq2Question: "Как обеспечивается безопасность сделок?",
     marketplaceFaq2Answer:
-      "Все финансовые операции проходят через escrow-сервис: средства блокируются до подтверждения передачи прав. Также мы предоставляем типовые юридические контракты, чтобы минимизировать риски.",
+      "Все финансовые операции проходят через escrow-сервис: средства блокируются до подтверждения получения доступа к видеотрансляции. Также мы предоставляем типовые юридические контракты, чтобы минимизировать риски.",
     marketplaceFaq3Question: "Сколько комиссия за сделку?",
     marketplaceFaq3Answer:
       "Комиссия платформы составляет [X]% от суммы сделки. Все комиссии прозрачны и указываются до подтверждения операции.",
-    marketplaceFaq4Question: "Как происходит процесс покупки прав?",
+    marketplaceFaq4Question:
+      "Как происходит процесс получения доступа к видеотрансляции?",
     marketplaceFaq4Answer:
-      "Выбираете пакет прав в каталоге → резервируете средства через escrow → подписываете электронный контракт → получаете права после подтверждения продавца → средства разблокируются продавцу.",
-    marketplaceFaq5Question:
-      "Можно ли продавать права для конкретного региона?",
-    marketplaceFaq5Answer:
-      "Да, вы можете выставлять пакеты прав для конкретных стран, регионов или даже городов, с возможностью установки эксклюзивности для каждой территории.",
+      "Выбираете пакет видеотрансляций в каталоге → резервируете средства через escrow → подписываете электронный контракт → получаете доступ к трансляциям после подтверждения продавца → средства разблокируются продавцу.",
+
     marketplaceFaq6Question: "Какие киберспортивные дисциплины поддерживаются?",
     marketplaceFaq6Answer:
       "Все основные: CS:GO, Dota 2, League of Legends, Valorant, StarCraft II, Overwatch и другие. Вы можете фильтровать события по дисциплинам в каталоге.",
@@ -504,13 +474,14 @@ export const messages = {
     marketplaceFaq8Question: "Что делать в случае спорных ситуаций?",
     marketplaceFaq8Answer:
       "Наша служба поддержки выступает арбитром в спорных ситуациях. Все сделки сопровождаются юридическими контрактами, а escrow-сервис гарантирует финансовую защиту.",
-    marketplaceFaq9Question: "Можно купить права только на одну платформу?",
+    marketplaceFaq9Question:
+      "Можно ли получить доступ к видеотранлсяциям только для определенной платформы?",
     marketplaceFaq9Answer:
-      "Да, вы можете покупать права под конкретные платформы (например, только для Twitch или YouTube), а также комбинировать разные платформы в одном пакете.",
+      "Да, вы можете получить доступ к видеотрансляциям под конкретные платформы (например, только для Twitch или YouTube), а также комбинировать разные платформы в одном пакете.",
     marketplaceFaq10Question:
-      "Как быстро происходит передача прав после сделки?",
+      "Как быстро происходит получение доступа к видеотрансляциям после сделки?",
     marketplaceFaq10Answer:
-      "После подтверждения оплаты через escrow передача прав и необходимых материалов происходит в течение 24 часов. Для срочных сделок доступен ускоренный режим.",
+      "После подтверждения оплаты через escrow получение доступа к видеотрансляциям происходит в течение 24 часов. Для срочных сделок доступен ускоренный режим.",
 
     supportForWhom: "Для кого?",
     supportForWhomText:
@@ -552,9 +523,6 @@ export const messages = {
     supportFaq7Question: "Как происходит координация во время мероприятия?",
     supportFaq7Answer:
       "Назначаем менеджера проекта, который координирует все процессы и остаётся на связи с вами на всех этапах.",
-    supportFaq8Question: "Вы помогаете с продажей прав на трансляцию?",
-    supportFaq8Answer:
-      "Да, мы интегрируемся с маркетплейсом прав: помогаем упаковать и разместить права, обеспечиваем техническую готовность для покупателей.",
     supportFaq9Question: "Какие форматы вещания вы поддерживаете?",
     supportFaq9Answer:
       "Работаем с любыми: LIVE-стримы, задержанный эфир, VOD-контент, адаптация под разные кодеки и разрешения.",
@@ -573,7 +541,7 @@ export const messages = {
     ecosystemTitle:
       "Киберспортивный холдинг SGL – это экосистема, объединяющая ключевые направления киберспорта",
     ecosystemService1: "Аналитика матчей",
-    ecosystemService2: "Продажа прав",
+    ecosystemService2: "Предоставление доступа к видеотрансляциям",
     ecosystemService3: "Организация турниров",
     missionHeader: "Наша миссия",
     missionText:
@@ -613,299 +581,270 @@ export const messages = {
     directorValue: "Мязов Магжан Талгатұлы",
   },
   [LOCALES.KAZAKH]: {
-    //home
-    team: "Топ",
+    download: "Жүктеу",
+    astana_member: "Астана Хаб-ға қатысудың куәлігі",
+    ustav: "Компания жарғысы",
+    team: "Команда",
     dmitry_pislevich: "Дмитрий Пислевич",
-    magzhan_myazov: "Магжан Мязов",
-    ceo: "Бас директор (CEO)",
-    mainTitle: "Спорт және киберспорт трансляцияларына қол жеткізуді ұсынамыз",
-    bookingEvents: "Іс-шараларды брондау",
+    magzhan_myazov: "Мағжан Мязов",
+    ceo: "Бас директор",
+    mainTitle: "Киберспорттық оқиғалардың бейнетрансляцияларына қол жеткіземіз",
+    bookingEvents: "Оқиғаларды брондау",
     partners: "Серіктестер",
-    astana_hub: "Astana Hub",
+    astana_hub: "Астана Хаб",
     acselerator: "Акселератор",
-    allOurProjects: "Біздің басқа жобаларымыз",
-    secondTitle: "Кілтпен киберспорт турнирлерін өткізу",
+    allOurProjects: "Басқа жобаларымыз",
+    secondTitle: "Киберспорттық турнирлерді толық циклде ұйымдастыру",
     secondMainButton: "Тапсырыс беру",
-
-    // main
     search: "Іздеу",
     more: "Толығырақ",
     filters: "Сүзгілер",
-    reset: "Қалпына келтіру",
+    reset: "Тазалау",
     all: "Барлығы",
-    coming: "Келешек",
+    coming: "Алдағы",
     past: "Өткен",
-    discipline: "Тәртіп",
+    discipline: "Пән",
     manager: "Ұйымдастырушы",
     developer: "Әзірлеуші",
     from: "Бастап",
     before: "Дейін",
-    event_dates: "Даты проведения kz",
-    prize_fond: "Призовой фонд kz",
-    noData: "Ештеңе табылған жоқ",
-    loading: "Жүктеу",
-
-    // event details
+    event_dates: "Өткізу күндері",
+    prize_fond: "Жеңіс сыйлығы",
+    noData: "Ештеңе табылмады",
+    loading: "Жүктелуде",
     description: "Сипаттама",
     commercial_proposal: "Коммерциялық ұсыныс",
-    event_website: "Іс-шараның сайты",
+    event_website: "Оқиға сайты",
     open: "Ашу",
     link_to_the_broadcast: "Трансляция сілтемесі",
     copy: "Көшіру",
     back: "Артқа",
-
-    // auth
     login: "Логин",
-    password: "Құпиясөз",
+    password: "Құпия сөз",
     entry: "Кіру",
-
-    // profile
-    my_events: "Менің іс-шараларым",
-
-    // commercial proposal
+    my_events: "Менің оқиғаларым",
     name: "Аты",
     phone_number: "Телефон нөмірі",
     comment: "Пікір",
     send: "Жіберу",
     comproposal_description:
-      "Байланыс мәліметтеріңізді қалдырыңыз, менеджер жақын арада хабарласады",
-    comproposal_success_title: "Өтінім сәтті жіберілді",
-    comproposal_success_description: "Менеджер сізбен жақын арада хабарласады",
-
-    // newmain
-    block1header:
-      "кәсіпорындар мен цифрлық қолдау көрсету киберспорт турнирлерінің ұйымдастырылуы",
+      "Контактілеріңізді қалдырыңыз, жақын арада сізбен менеджер байланысады",
+    comproposal_success_title: "Өтініш сәтті жіберілді",
+    comproposal_success_description: "Жақын арада сізбен менеджер байланысады",
+    block1header: "киберспорттық турнирлерді ұйымдастыру және digital-қолдау",
     block1description:
-      "киберспорттық оқиғаларға құқықтарды сатамыз және толық трансляцияларды қамтамасыз етеміз",
+      "киберспорттық оқиғалардың бейнетрансляцияларына қол жеткіземіз және трансляцияларға толық қолдау көрсетеміз",
     block1button: "байланысу",
-    block2first: "Уақыт пен трендтерден алда дамығысы келетін компанияларға",
+    block2first:
+      "Уақыт пен трендтерден озық дамытқысы келетін компаниялар үшін",
     block2second:
-      "қарапайым видеожазбаны қолданушыға ыңғайлы дайын трансляцияға айналдырамыз",
+      "Қарапайым бейнеағынды пайдаланушы түсінетін трансляцияға айналдырамыз",
     block2third:
-      "оқиғаны нақты уақыт режимінде машиналық көру шешімдері арқылы аналитикалық өңдейміз",
-
+      "Машиналық көру негізіндегі шешімдер арқылы оқиғаның нақты уақыттағы аналитикасын жүргіземіз",
     products: "өнімдер",
     analytics: "Аналитика",
     analyticsDescription:
-      "арнайы киберспорт дисциплиналарына бейімделген ақылды нақты уақыттағы видеожазба аналитикасы",
+      "бөлек киберспорттық пәндерге оқытылған бейнеағынның ақылды нақты уақыт аналитикасы",
     marketplace: "Маркетплейс",
     marketplaceDescription:
-      "ең ірі киберспорттық оқиғаларға құқықтарды сатып алу және сату үшін платформа",
+      "ірі киберспорттық оқиғалардың бейнетрансляцияларына қол жеткізуді ыңғайлы сату және сатып алу платформасы",
     walkingDescription:
-      "киберспорттық іс-шараны толық циклмен ұйымдастыру – оқиғаны ұйымдастырудан видеожазбаны өңдеуге дейін",
+      "киберспорттық іс-шараны құрудың толық циклы - оқиғаны ұйымдастырудан бейнеағынмен жұмысқа дейін",
     walking: "Қолдау",
     arsentev: "Роман Арсентьев",
     shukanov: "Артур Шуканов",
-    prmanager: "PR менеджері",
-    developer: "Әзірлеуші",
-    founder: "Құрылған адам",
+    prmanager: "PR-менеджер",
+    founder: "Құрылтайшы",
     prBlockHeader: "киберспорттық оқиғаларды ұйымдастырамыз және қолдаймыз",
     prBlockDescription:
-      "киберспорттық оқиғаларға құқықтарды сатамыз және толық трансляцияларды қамтамасыз етеміз",
-    too: 'ТОО "СГЛ"',
-    main: "негізгі",
-    about: "туралы",
-
-    question1: "Сізде трансляциялар үшін лицензиялы құқықтар бар ма?",
+      "киберспорттық оқиғалардың бейнетрансляцияларына қол жеткіземіз және трансляцияларға толық қолдау көрсетеміз",
+    too: "«СГЛ» ЖШС",
+    main: "басты",
+    about: "біз туралы",
+    question1: "Трансляцияларға сіздердің лицензиялық құқықтарыңыз бар ма?",
     answer1:
-      "Иә, барлық құқықтар құқық иелерімен ресми келісімшарттармен расталған.",
-    question2: "Сіздің аналитикаңыз не нәрсені қамтиды?",
+      "Ия, барлық құқықтар құқық иелерімен ресми келісімдермен расталған.",
+    question2: "Аналитика нені қамтиды?",
     answer2:
-      "Біздің аналитика нақты уақыттағы видеожолақтың ақылды талдауы болып табылады, ол арнайы киберспорттық пәндерге үйретілген.",
+      "Біздің аналитика - бұл бөлек киберспорттық пәндерге оқытылған бейнеағынның ақылды нақты уақыт талдауы.",
     question3: "Сіздің маркетплейсіңіз қалай жұмыс істейді?",
     answer3:
-      "Бұл ірі киберспорттық оқиғалардың құқықтарын ыңғайлы сатуға және сатып алуға арналған платформа.",
-    question4: "Іс-шараларды сүйемелдеуге не кіреді?",
+      "Бұл ірі киберспорттық оқиғалардың бейнетрансляцияларына қол жеткізуді ыңғайлы сату және сатып алу платформасы.",
+    question4: "Іс-шараларға қолдау нені қамтиды?",
     answer4:
-      "Толық цикл — киберспорттық оқиғаны ұйымдастырудан видеожолақпен жұмыс істеуге дейін.",
-    question5: "Қай пәндерге аналитика қолжетімді?",
-    answer5: "Біз ең танымал пәндерді қолдаймыз — Dota 2, CS2 және басқалары.",
+      "Толық цикл - киберспорттық оқиғаны ұйымдастырудан бейнеағынмен жұмысқа дейін.",
+    question5: "Аналитика қандай пәндер үшін қолжетімді?",
+    answer5: "Біз ең танымал пәндерді қолдаймыз - Dota 2, CS2 және басқалары.",
     question6: "Сіздің аналитикаңызды API арқылы біріктіруге бола ма?",
-    answer6: "Иә, біз B2B клиенттеріне ыңғайлы API ұсынамыз.",
-    question7: "Сіз халықаралық серіктестермен жұмыс жасайсыз ба?",
-    answer7: "Иә, бізде Ресейде, Сербияда, БАӘ-де және Кипрде серіктестер бар.",
-    question8: "Сізден белгілі бір турнирге құқықтарды сатып алуға бола ма?",
+    answer6: "Ия, біз B2B-клиенттер үшін ыңғайлы API ұсынамыз.",
+    question7: "Сіз халықаралық серіктестермен жұмыс істейсіз бе?",
+    answer7: "Ия, біздің Ресей, Сербия, БАӘ және Кипрде серіктестеріміз бар.",
+    question8:
+      "Сізден белгілі бір турнирдің бейнетрансляциясына қол жеткізуді сатып алуға бола ма?",
     answer8:
-      "Иә, маркетплейс арқылы сіз қызықтырған оқиғаға құқықтарды сатып ала аласыз.",
-
+      "Ия, маркетплейс арқылы сіз қызығушылық тудыратын оқиғаның бейнетрансляцияларына қол жеткізуді сатып ала аласыз.",
     forWhom: "Кім үшін?",
     forWhomText:
-      "Біздің клиенттеріміз - матчтерді жылдам және жоғары сапалы сандауға муқтаж киберспорттық медиа-мазмұнның құқық иелері",
+      "Біздің клиенттеріміз - матчтарды жылдам және сапалы цифрландыруды қажет ететін киберспорттық медиамазмұнның құқық иелері",
     whatWeDo: "Біз не істейміз?",
     whatWeDoText:
-      "Біз шикі бейне ағынын кіріс ретінде аламыз, оны автоматты түрде өңдейміз және киберспорттық матчтар үшін дайын метрикалар жинағын жеткіземіз. Мұның бәрі нақты уақытта",
+      "Кірісте қарапайым бейнеағынды аламыз, автоматты түрде өңдейміз және киберспорттық матчтың дайын метрикалар жиынтығын қайтарамыз. Мұның бәрі нақты уақытта",
     whatBenefits: "Бұл қандай пайда әкеледі?",
     whatBenefitsText:
-      "Енді голдарды, өлтірулерді және трансляция үшін қажет басқа метрикаларды қолмен санаудың қажеті жоқ. Енді мұны компьютерлік көру технологиялары жасайды. Автоматты түрде. Ұйқысыз, демалусыз және қымбат қателерсіз.",
+      "Енді қолмен голдарды, килдерді және трансляция үшін қажет басқа метрикаларды санаудың қажеті жоқ. Енді мұны компьютерлік көру технологиялары жасайды. Автоматты түрде. Ұйықтаусыз, демалғансыз және қымбат қателерсіз.",
     step1Header:
       "Сіз дайын бейнені жүктейсіз немесе трансляция сілтемесін бересіз",
-    step1Text:
-      "Бізге тек сіздің медиа-мазмұныңыз керек. Басқа ештеңе керек емес!",
-    step2Header: "Жүйе бейне ағынын өңдейді",
+    step1Text: "Сізден тек сіздің медиамазмұныңыз қажет. Басқа ештеңе!",
+    step2Header: "Жүйе бейнеағынды өңдейді",
     step2Text:
-      "Компьютерлік көру алгоритмдерін пайдалана отырып, біз дереу қажетті статистиканы аламыз және оны API, JSON немесе мәтін түрінде жеткіземіз",
-    step3Header:
-      "Сіз өзіңіздің киберспорттық іс-шараңыздың аналитикасын аласыз",
+      "Компьютерлік көру алгоритмдерінің көмегімен біз сол сәтте қажетті статистиканы аламыз және оны API, JSON немесе мәтін түрінде қайтарамыз",
+    step3Header: "Сіз киберспорттық оқиғаңыздың аналитикасын аласыз",
     step3Text:
-      "Содан кейін сіз статистика негізінде бейне ағыныңызға таңдаулы HUD-тар қосу үшін біздің басқа қызметтерімізді пайдалана аласыз.",
-    faq1Question: "Сізде матчтар бойынша тікелей аналитика бар ма?",
+      "Содан кейін статистика негізінде бейнеағыныңыздың үстіне тапсырыс бойынша HUD қосу үшін біздің басқа сервистерімізді пайдалана аласыз.",
+    faq1Question: "Сізде матчтар бойынша тірі аналитика бар ма?",
     faq1Answer:
-      "Иә, біз нақты уақыт режимінде аналитика ұсынамыз - негізгі оқиғалар, ойыншылар мен командалар статистикасы.",
+      "Ия, біз нақты уақыт режимінде аналитика ұсынамыз - негізгі оқиғалар, ойыншылар мен командалар статистикасы.",
     faq2Question: "Сіздің аналитикаңызға қандай деректер кіреді?",
     faq2Answer:
-      "Біз ойын метрикаларын (өлтірулер, экономика, картаны бақылау, раунд жеңіс пайызы) жинаймыз және құрылымдаймыз.",
+      "Біз ойын метрикаларын жинап, құрылымдаймыз (киллер, экономика, картаны бақылау, ұтылған раундтар пайызы).",
     faq3Question: "Сіздің аналитикаңызды API арқылы біріктіре аламын ба?",
     faq3Answer:
-      "Иә, біз аналитиканы платформаларға, медиа-қызметтерге және серіктес сайттарға біріктіру үшін API ұсынамыз.",
-    faq4Question: "Сіз таңдаулы есептерді қолдайсыз ба?",
+      "Ия, біз аналитиканы платформаларға, медиасервистерге және серіктес сайттарға біріктіру үшін API ұсынамыз.",
+    faq4Question: "Сіз тапсырыс бойынша есептерді қолдайсыз ба?",
     faq4Answer:
-      "Әрине, біз клиент сұрауы бойынша есептерді жасай аламыз - негізгі қорытындылардан бастап ойыншылар мен карталар бойынша терең статистикаға дейін.",
-
+      "Әрине, біз клиент сұрауы бойынша есептерді құра аламыз - негізгі жинақтардан ойыншылар мен карталар бойынша терең статистикаға дейін.",
     marketplaceForWhom: "Кім үшін?",
     marketplaceForWhomText:
-      "Біздің клиенттеріміз - ірі жарыстардың трансляциялық құқықтарын сататын немесе сатып алатын киберспорттық турнирлерді ұйымдастырушылар, промоутерлер және медиа холдингтер.",
+      "Біздің клиенттеріміз - ірі киберспорттық турнирлердің бейнетрансляцияларына қол жеткізуді сататын немесе сатып алатын киберспорттық турнирлерді ұйымдастырушылар, промоутерлер және медиахолдингтер.",
     marketplaceWhatWeDo: "Біз не істейміз?",
     marketplaceWhatWeDoText:
-      "Біз әртүрлі аймақтарға, аумақтарға және платформаларға арналған құқықтар пакеттерін escrow-мәмілелер мен үлгілік келісімшарттар арқылы қауіпсіз сатуға және сатып алуға болатын трансляциялық құқықтар каталогымен B2B-платформасын ұсынамыз.",
+      "Бейнетрансляциялар каталогы бар B2B-платформаны ұсынамыз, онда әртүрлі аймақтар, аумақтар және платформалар үшін трансляцияларға қол жеткізу пакеттерін escrow-мәмілелер мен үлгілік келісім-шарттар арқылы қауіпсіз сатуға және сатып алуға болады.",
     marketplaceBenefits: "Бұл қандай пайда әкеледі?",
     marketplaceBenefitsText:
-      "Жаңа монетизация каналдарын ашады, жаһандық нарықтарға шығу бөгеттерін азайтады және заңды тәуекелдер мен контрагенттерді іздеусіз мәмілелерді жабуды жеделдетеді.",
+      "Монетизацияның жаңа арналарын ашады, жаһандық нарықтарға шығу бөгеттерін төмендетеді және заңды тәуекелдер мен контрагенттерді іздеусіз мәмілелерді жасастыруды жеделдетеді.",
     marketplaceStep1Header:
-      "Сіз құқықтар пакетін орналастырасыз немесе каталогта қолайлысын таңдайсыз",
+      "Сіз бейнетрансляциялар пакетін орналастырасыз немесе каталогтан сәйкесін таңдайсыз",
     marketplaceStep1Text:
-      "Шарттарды көрсетіңіз: эксклюзивтілік, платформалар, аумақ және мерзімі. Сүзгілер қажетті оқиғаны тез табуға көмектеседі.",
+      "Шарттарды көрсетесіз: эксклюзивтілік, платформалар, аумақ және мерзім. Сүзгілер қажетті оқиғаны тез табуға көмектеседі.",
     marketplaceStep2Header:
-      "Жүйе escrow және үлгілік келісімшарттар арқылы қауіпсіз мәмілелерді қамтамасыз етеді",
+      "Жүйе escrow және үлгілік келісім-шарттар арқылы қауіпсіз мәмілені қамтамасыз етеді",
     marketplaceStep2Text:
-      "Сатып алушы қаражатты резервтейді, сатушы құқықтарды тапсырады - платформа тараптар үшін тәуекелсіз шарттардың орындалуын кепілдейді.",
+      "Сатып алушы қаражатты резервтейді, сатушы қол жеткізуді ұсынады - платформа тараптар үшін тәуекелсіз шарттарды орындауды кепілдейді.",
     marketplaceStep3Header:
-      "Сіз трансляция құқықтарын немесе оларды сатудан түскен пайданы аласыз",
+      "Сіз бейнетрансляцияларға қол жеткізесіз немесе оларды сатудан түскен пайданы аласыз",
     marketplaceStep3Text:
-      "Мәміле расталғаннан кейін сатып алушы лицензия алады, ал сатушы төлем алады. Жаңа нарықтар мен аудиторияларға масштабтауға болады.",
-    marketplaceFaq1Question:
-      "Платформада қандай трансляция құқықтарын сатуға болады?",
-    marketplaceFaq1Answer:
-      "Біз эксклюзивті және эксклюзивті емес құқықтарды, соның ішінде аймақтық эксклюзивтер, нақты платформаларға арналған құқықтар (YouTube, Twitch) және әртүрлі аумақтарға арналған бөлшектелген құқықтар пакеттерін сатуды қолдаймыз.",
+      "Мәміле расталғаннан кейін сатып алушы бейнетрансляцияға қол жеткізеді, ал сатушы төлем алады. Жаңа нарықтар мен аудиторияларға масштабтауға болады.",
     marketplaceFaq2Question:
       "Мәмілелердің қауіпсіздігі қалай қамтамасыз етіледі?",
     marketplaceFaq2Answer:
-      "Барлық қаржылық операциялар escrow сервисі арқылы жүреді: қаражат құқықтарды тасымалдау расталғанға дейін блокадаланады. Сондай-ақ біз тәуекелдерді азайту үшін үлгілік заңды келісімшарттарды ұсынамыз.",
+      "Барлық қаржылық операциялар escrow-сервис арқылы жүреді: қаражат бейнетрансляцияға қол жеткізу расталғанға дейін блокталады. Сондай-ақ біз тәуекелдерді азайту үшін үлгілік заңды келісім-шарттарды ұсынамыз.",
     marketplaceFaq3Question: "Мәміле үшін комиссия қанша?",
     marketplaceFaq3Answer:
-      "Платформа комиссиясы мәміле сомасының [X]% құрайды. Барлық комиссиялар айқын және операцияны растауға дейін көрсетіледі.",
-    marketplaceFaq4Question: "Құқықтарды сатып алу процесі қалай жүреді?",
+      "Платформа комиссиясы мәміле сомасының [X]% құрайды. Барлық комиссиялар мөлдір және операция расталғанға дейін көрсетіледі.",
+    marketplaceFaq4Question:
+      "Бейнетрансляцияға қол жеткізу процесі қалай жүреді?",
     marketplaceFaq4Answer:
-      "Каталогта құқықтар пакетін таңдаңыз → escrow арқылы қаражатты резервтеңіз → электронды келісімшартқа қол қойыңыз → сатушы растағаннан кейін құқықтарды алыңыз → қаражат сатушыға босатылады.",
-    marketplaceFaq5Question:
-      "Белгілі бір аймақ үшін құқықтарды сатуға бола ма?",
-    marketplaceFaq5Answer:
-      "Иә, сіз нақты елдер, аймақтар немесе тіпті қалалар үшін құқықтар пакеттерін ұсына аласыз, әрбір аумақ үшін эксклюзивтілік белгілеу мүмкіндігімен.",
+      "Каталогтан бейнетрансляциялар пакетін таңдаңыз → escrow арқылы қаражатты резервтеңіз → электронды келісім-шартқа қол қойыңыз → сатушы растағаннан кейін трансляцияларға қол жеткізесіз → қаражат сатушыға босатылады.",
     marketplaceFaq6Question: "Қандай киберспорттық пәндер қолдау көрсетіледі?",
     marketplaceFaq6Answer:
-      "Барлық негізгілер: CS:GO, Dota 2, League of Legends, Valorant, StarCraft II, Overwatch және басқалар. Сіз каталогта оқиғаларды пән бойынша сүзе аласыз.",
+      "Барлық негізгілер: CS:GO, Dota 2, League of Legends, Valorant, StarCraft II, Overwatch және басқалары. Сіз каталогта оқиғаларды пәндер бойынша сүзіңіз.",
     marketplaceFaq7Question: "Сатушылардың сенімділігі қалай тексеріледі?",
     marketplaceFaq7Answer:
-      "Біз рейтингтер және пікірлер жүйесін қолданамыз, компаниялардың заңды мәртебесін тексереміз және әрбір сатушының аяқталған мәмілелер тарихына қол жеткіземіз.",
+      "Біз рейтингтер мен пікірлер жүйесін қолданамыз, компаниялардың заңды мәртебесін тексереміз және әрбір сатушының аяқталған мәмілелер тарихына қол жеткізуді ұсынамыз.",
     marketplaceFaq8Question: "Даулы жағдайларда не істеу керек?",
     marketplaceFaq8Answer:
-      "Біздің қолдау қызметі даулы жағдайларда арбитр ретінде әрекет етеді. Барлық мәмілелер заңды келісімшарттармен қамтылған, ал escrow сервисі қаржылық қорғанысты кепілдейді.",
+      "Біздің қолдау қызметі даулы жағдайларда арбитр ретінде әрекет етеді. Барлық мәмілелер заңды келісім-шарттармен қамтылған, ал escrow-сервис қаржылық қорғанысты кепілдейді.",
     marketplaceFaq9Question:
-      "Тек бір платформа үшін құқықтарды сатып алуға бола ма?",
+      "Бейнетрансляцияларға тек белгілі бір платформа үшін қол жеткізуге бола ма?",
     marketplaceFaq9Answer:
-      "Иә, сіз нақты платформалар үшін құқықтарды сатып ала аласыз (мысалы, тек Twitch немесе YouTube үшін), сонымен қатар бір пакетте әртүрлі платформаларды біріктіре аласыз.",
+      "Ия, сіз бейнетрансляцияларға нақты платформалар үшін (мысалы, тек Twitch немесе YouTube) қол жеткізе аласыз, сондай-ақ бір пакетте әртүрлі платформаларды біріктіре аласыз.",
     marketplaceFaq10Question:
-      "Мәміледен кейін құқықтар қаншалықты тез табысталады?",
+      "Мәміледен кейін бейнетрансляцияларға қол жеткізу қаншалықты жылдам жүреді?",
     marketplaceFaq10Answer:
-      "Escrow арқылы төлем расталғаннан кейін құқықтарды табыстау және қажетті материалдар 24 сағат ішінде жүреді. Шұғыл мәмілелер үшін жеделдендірілген режим қол жетімді.",
-
+      "Escrow арқылы төлем расталғаннан кейін бейнетрансляцияларға қол жеткізу 24 сағат ішінде жүреді. Шұғыл мәмілелер үшін жеделдендірілген режим қолжетімді.",
     supportForWhom: "Кім үшін?",
     supportForWhomText:
-      "Біздің клиенттеріміз - операциялық қиындықтарсыз кәсіби толық циклді іс-шара өткізгісі келетін киберспорттық іс-шараларды ұйымдастырушылар, брендтер және құқық иелері.",
+      "Біздің клиенттеріміз - операциялық қиындықтарсыз кәсіби оқиғаны «толық циклде» өткізгісі келетін киберспорттық іс-шараларды ұйымдастырушылар, брендтер және құқық иелері.",
     supportWhatWeDo: "Біз не істейміз?",
     supportWhatWeDoText:
-      "Біз логистика мен техникалық дайындықтан бастап эфир режиссурасы, графикалық рәсімдеу және пост-продакшнға дейін ұйымдастыру мен өндірістің толық циклын қамтамасыз етеміз.",
+      "Ұйımдастыру мен өндірістің толық циклын қамтамасыз етеміз: логистика мен техникалық дайындықтан эфир режиссурасы, графикалық рәсімдеу және постродакшнға дейін.",
     supportBenefits: "Бұл қандай пайда әкеледі?",
     supportBenefitsText:
-      "Контентке және көрермендерге бағыттауға мүмкіндік береді, техникалық細节тарға емес. Кәсіби трансляция сапасы, тәуекелдерді азайту және ресурстарды үнемдеу.",
-    supportStep1Header: "Міндеттерді талқылап, жоспар жасаймыз",
+      "Контентке және көрермендерге назар аударуға мүмкіндік береді, техникалық детальдарға емес. Кәсіби сапалы трансляция, тәуекелдерді төмендету және ресурстарды үнемдеу.",
+    supportStep1Header: "Міндеттерді талқылап, жоспар құрастырамыз",
     supportStep1Text:
       "Брифинг өткіземіз, регламентті келісеміз, іс-шараңыздың мақсаттары мен негізгі метрикаларын анықтаймыз.",
     supportStep2Header: "Трансляцияны ұйымдастырамыз және өткіземіз",
     supportStep2Text:
-      "Жабдықтарды орнатамыз, көпкамералы түсіруді, дыбысты, графиканы қамтамасыз етеміз және нақты уақыт режимінде эфирді жүргіземіз.",
+      "Жабдықты баптаймыз, мультикамералы түсіруді, дыбысты, графикты қамтамасыз етеміз және нақты уақытта эфирді жүргіземіз.",
     supportStep3Header: "Контентті өңдейміз және монтаймыз",
     supportStep3Text:
-      "Клиптер, нарезкалар, тизерлер жасаймыз және құқық иелері үшін материалдар дайындаймыз. Трансляция құқықтарын монетизациялауға көмектесеміз.",
-    supportFaq1Question: "Іс-шараның қандай кезеңдерін қамтыйсыз?",
+      "Клиптерді, нарезкаларды, тизерлерді жасаймыз және құқық иелері үшін материалдарды дайындаймыз. Трансляция құқықтарын монетизациялауға көмектесеміз.",
+    supportFaq1Question: "Сіз іс-шараның қандай кезеңдерін қамтысыз?",
     supportFaq1Answer:
-      "Барлығын: пре-продакшен (жоспарлау, логистика), продакшен (трансляция, графика, дыбыс) және пост-продакшен (монтаж, клиптер, есеп беру).",
-    supportFaq2Question: "Біздің бар жабдықпен жұмыс істей аласыз ба?",
+      "Барлығын: пре-продакшен (жоспарлау, логистика), продакшен (трансляция, графика, дыбыс) және пост-продакшен (монтаж, клиптер, есептілік).",
+    supportFaq2Question: "Сіз біздің бар жабдығымызбен жұмыс істей аласыз ба?",
     supportFaq2Answer:
-      "Иә, біз сіздің инфрақұрылымыңызға бейімделеміз немесе тапсырмалар мен техникалық талаптарға байланысты өз жабдығымызды ұсынамыз.",
-    supportFaq3Question: "Трансляция үшін графика мен HUD жасайсыз ба?",
+      "Ия, біз сіздің инфрақұрылымыңызға бейімделеміз немесе тапсырмалар мен техникалық талаптарға байланысты өз жабдығымызды ұсынамыз.",
+    supportFaq3Question: "Сіз трансляция үшін графику және HUD жасайсыз ба?",
     supportFaq3Answer:
-      "Иә, біз сіздің бренд стиліңізге сәйкес таңдаулы оверлейлер, HUD, lower thirds және басқа графикалық рәсімдеу жасаймыз.",
-    supportFaq4Question: "Трансляцияның тұрақтылығын қалай қамтамасыз етесіз?",
+      "Ия, біз сіздің брендіңіздің стиліне сәйкес тапсырыс бойынша оверлейлер, HUD, lower thirds және басқа графикалық рәсімдеулерді жасаймыз.",
+    supportFaq4Question:
+      "Сіз трансляцияның тұрақтылығын қалай қамтамасыз етесіз?",
     supportFaq4Answer:
-      "Біз критикалық жабдықты көшіріп қоямыз, сапаны нақты уақыт режимінде бақылаймыз және ақауларға жылдам жауап беру протоколдарын ұстанамыз.",
+      "Critical-жабдықты көшіріп қоямыз, сапаны нақты уақытта бақылаймыз және ақауларға жылдам жауап беру протоколдары бар.",
     supportFaq5Question:
-      "Мультистриммен (бірнеше платформа бір уақытта) жұмыс істейсіз бе?",
+      "Сіз мультистриммен (бірнеше платформаны бір уақытта) жұмыс істейсіз бе?",
     supportFaq5Answer:
-      "Иә, біз YouTube, Twitch, VK, OTT платформалары және басқа арналарға бір уақытта трансляцияны орнатамыз, әр платформаға бейімделедік.",
-    supportFaq6Question: "Эфирден кейін монтаж ұсынасыз ба?",
+      "Ия, біз әр платформаға бейімделу арқылы YouTube, Twitch, VK, OTT-платформалар және басқа арналарға бір мезгілде трансляцияны орнатамыз.",
+    supportFaq6Question: "Сіз эфирден кейін монтаж ұсынасыз ба?",
     supportFaq6Answer:
-      "Иә, біз үздік сәттердің нарезкаларын, әлеуметтік желілерге арналған клиптерді, матчтардың толық жазбаларын жасаймыз және серіктестер үшін материалдар дайындаймыз.",
-    supportFaq7Question: "Іс-шара кезінде координация қалай жүреді?",
+      "Ия, біз үздік сәттердің нарезкаларын, әлеуметтік желілерге арналған клиптерді, матчтардың толық жазбаларын жасаймыз және серіктестер үшін материалдарды дайындаймыз.",
+    supportFaq7Question: "Іс-шара кезінде үйлестіру қалай жүреді?",
     supportFaq7Answer:
-      "Біз барлық процестерді координациялайтын және барлық кезеңдерде сізбен байланыста болатын жоба менеджерін тағайындаймыз.",
-    supportFaq8Question: "Трансляция құқықтарын сатуға көмектесесіз бе?",
-    supportFaq8Answer:
-      "Иә, біз құқықтар маркетплейсімен интеграцияланамыз: құқықтарды қаптауға және орналастыруға көмектесеміз, сатып алушылар үшін техникалық дайындықты қамтамасыз етеміз.",
-    supportFaq9Question: "Қандай хабар тарату форматтарын қолдайсыз?",
+      "Барлық процестерді үйлестіретін және барлық кезеңдерде сізбен байланыста болатын жобалық менеджерді тағайындаймыз.",
+    supportFaq9Question: "Сіз қандай хабар тарату форматтарын қолдайсыз?",
     supportFaq9Answer:
-      "Біз барлығымен жұмыс істейміз: LIVE-стримдер, кейінгі эфир, VOD-контент, әртүрлі кодектер мен ажыратымдарға бейімделу.",
-    supportFaq10Question: "Баға құрылымы қалай құрылады?",
+      "Кез келген форматпен жұмыс істейміз: LIVE-стримдер, кейінгі эфир, VOD-контент, әртүрлі кодектер мен ажыратымдарға бейімделу.",
+    supportFaq10Question: "Pricing қалай құрылады?",
     supportFaq10Answer:
-      "Іс-шара масштабына байланысты: толық циклді пакеттік ұсыныстар немесе жеке қызметтер. Брифингтен кейін біз егжей-тегжейлі смета дайындаймыз.",
-
-    companyName: "«SGL» ЖШС",
+      "Оқиға масштабына байланысты: «толық цикл» пакеттік ұсыныстар немесе жеке қызметтер. Брифингтен кейін біз егжей-тегжейлі сметаны дайындаймыз.",
+    companyName: "«СГЛ» ЖШС",
     companyDescription:
       "Astana Hub халықаралық технологиялық паркінің қатысушысы және «SGL киберспорттық платформасы» инновациялық жобасының әзірлеушісі",
     service1Header: "Бағдарламалық жасақтаманы әзірлеу және енгізу",
-    service2Header: "Техникалық қолдау және сандық шешімдерді дамыту",
+    service2Header: "Техникалық қолдау және цифрлық шешімдерді дамыту",
     service3Header:
-      "Өнімдерді нарықтың қажеттіліктеріне бейімдеу және интеграциялау",
+      "Нарықтың қажеттіліктеріне байланысты өнімдерді біріктіру және өзгерту",
     service4Header:
-      "Бағдарламалық жасақтамалар мен қызметтерді коммерцияландыру, ақылы контент орналастыру және қосымша функцияларды сату",
+      "Бағдарламалық өнімдер мен сервистерді коммерцияландыру, оның ішінде ақылы контентті орналастыру және қосымша функцияларды сату",
     ecosystemTitle:
-      "SGL киберспорттық холдингі - киберспорттың негізгі бағыттарын біріктіретін экожүйе",
-    ecosystemService1: "Матчтарды талдау",
-    ecosystemService2: "Құқықтарды сату",
+      "SGL киберспорттық холдингі - бұл киберспорттың негізгі бағыттарын біріктіретін экожүйе",
+    ecosystemService1: "Матчтар аналитикасы",
+    ecosystemService2: "Бейнетрансляцияларға қол жеткізу",
     ecosystemService3: "Турнирлерді ұйымдастыру",
-    missionHeader: "Біздің миссия",
+    missionHeader: "Біздің миссиямыз",
     missionText:
-      "Біз заманауи IT шешімдерді жасау арқылы киберспорттың болашағын қалыптастыруға және ойыншыларды, көрермендерді және бизнесті бірыңғай платформада біріктіруге ұмтыламыз. Біздің мақсатымыз - киберспорт саласын өңірде және халықаралық деңгейде дамыту, өсу, ынтымақтастық және коммерцияландыру үшін жаңа мүмкіндіктер жасау.",
-    value1Header: "[ Инновация ]",
+      "Біз заманауи IT-шешімдерді жасау және ойыншыларды, көрермендерді және бизісті бір платформада біріктіру арқылы киберспорттың болашағын қалыптастыруға ұмтыламыз. Біздің мақсатымыз - өсу, ынтымақтастық және монетизация үшін жаңа мүмкіндіктерді қамтамасыз ете отырып, киберспорт индустриясын өңірде және халықаралық деңгейде дамыту.",
+    value1Header: "[ Инновациялар ]",
     value1Text:
       "біз заманауи технологияларды енгіземіз және бір қадам алда болуға ұмтыламыз.",
     value2Header: "[ Ашықтық ]",
     value2Text:
-      "біз киберспорт саласының барлық қатысушылары үшін ыңғайлы шешімдер жасаймыз.",
+      "біз киберспорт индустриясының барлық қатысушылары үшін ыңғайлы шешімдер жасаймыз.",
     value3Header: "[ Серіктестік ]",
     value3Text:
-      "біз халықаралық және жергілікті компаниялармен ұзақ мерзімді қарым-қатынас орнатамыз.",
+      "біз халықаралық және жергілікті компаниялармен ұзақ мерзімді қарым-қатынас құрамыз.",
     value4Header: "[ Даму ]",
     value4Text:
       "біз киберспорттың жаппай құбылыс және кәсіби сала ретінде өсуіне ықпал етеміз.",
-
     howitworks: "Бұл қалай жұмыс істейді?",
     disciplines: "Пәндер",
     companycard: "Компания карточкасы",
     confpolicy: "Құпиялылық саясаты",
     userpolicy: "Пайдаланушы келісімі",
-    productSite: "Өнімнің веб-сайты",
-    ourcompetentions: "Біздің құзыреттеріміз",
-
+    productSite: "өнім сайты",
+    ourcompetentions: "Біздің құзыреттіліктеріміз",
     companyInfo: "Компания туралы ақпарат",
     fullName: "Толық атауы",
     shortName: "Қысқаша атауы",
@@ -914,10 +853,10 @@ export const messages = {
     director: "Басшысы",
     location: "Орналасқан жері",
     address:
-      "Қазақстан Республикасы, Алматы қ., Ерменсай шағы, Жәңгір хан көш., 1-үй, индекс 050000",
-    fullNameValue: "«СГЛ» жауапкершілігі шектеулі серіктестігі",
+      "Қазақстан Республикасы, Алматы қ., Ерменсай к-сі, Жәңгір хан к-сі, 1 үй, индекс 050000",
+    fullNameValue: "«СГЛ» Жауапкершілігі Шектеулі Серіктестігі",
     shortNameValue: "«СГЛ» ЖШС",
-    registrationDateValue: "22 сәуір 2022 жыл",
+    registrationDateValue: "2022 жылдың 22 сәуірі",
     directorValue: "Мязов Мағжан Талғатұлы",
   },
 };
