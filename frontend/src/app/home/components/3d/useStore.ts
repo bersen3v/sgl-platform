@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-const textures = ["1.jpeg", "2.jpeg", "3.jpeg"];
+const textures = ["/1.jpeg", "/2.jpeg", "/3.jpeg"];
 
 interface Store {
   index: number;
