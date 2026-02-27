@@ -63,7 +63,7 @@ export default function Footer() {
             color={MyColors.green}
             onClick={() => {
               router.push(
-                "https://www.instagram.com/sglone.kz?igsh=eWZ1NjhqMDdmbmw="
+                "https://www.instagram.com/sglone.kz?igsh=eWZ1NjhqMDdmbmw=",
               );
             }}
           />
@@ -78,7 +78,7 @@ export default function Footer() {
         <div style={{ height: "5em" }}></div>
         <div style={{ display: "flex", flexDirection: "column", gap: "0.6em" }}>
           <TextStyle.ProductText style={{ textAlign: "right" }}>
-            {intl.formatMessage({ id: "too" })} 2025
+            {intl.formatMessage({ id: "too" })} 2026
           </TextStyle.ProductText>
 
           <a href="/companyCard.txt" download>
