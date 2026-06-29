@@ -2,15 +2,40 @@ package db
 
 import (
 	"database/sql"
+	"log"
 
 	_ "github.com/mattn/go-sqlite3"
 )
 
-func CreateDb() {
-	db, _ := sql.Open("sqlite3", "/app/store.db")
-	defer db.Close()
+var Pool *sql.DB
 
-	db.Exec(`
+func InitPool(dbPath string) {
+	var err error
+	Pool, err = sql.Open("sqlite3", dbPath)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	Pool.SetMaxOpenConns(1)
+
+	_, err = Pool.Exec("PRAGMA journal_mode=WAL")
+	if err != nil {
+		log.Printf("WARNING: Failed to set WAL mode: %v", err)
+	}
+
+	_, err = Pool.Exec("PRAGMA busy_timeout=5000")
+	if err != nil {
+		log.Printf("WARNING: Failed to set busy_timeout: %v", err)
+	}
+
+	_, err = Pool.Exec("PRAGMA synchronous=NORMAL")
+	if err != nil {
+		log.Printf("WARNING: Failed to set synchronous=NORMAL: %v", err)
+	}
+}
+
+func CreateDb() {
+	Pool.Exec(`
 		CREATE TABLE IF NOT EXISTS Events (
 			id INTEGER PRIMARY KEY AUTOINCREMENT,
 			previewPhoto TEXT NOT NULL,
@@ -32,7 +57,7 @@ func CreateDb() {
 		)	
 	`)
 
-	db.Exec(`
+	Pool.Exec(`
 		CREATE TABLE IF NOT EXISTS Users (
 			id INTEGER PRIMARY KEY AUTOINCREMENT,
 			previewPhoto TEXT NOT NULL,
@@ -47,7 +72,7 @@ func CreateDb() {
 		)
 	`)
 
-	db.Exec(`
+	Pool.Exec(`
 		CREATE TABLE IF NOT EXISTS Sales (
 			id INTEGER PRIMARY KEY AUTOINCREMENT,
 			eventId INTEGER NOT NULL,

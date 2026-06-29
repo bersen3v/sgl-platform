@@ -10,10 +10,7 @@ import (
 )
 
 func AddEvent(e entities.Event) {
-	db, _ := sql.Open("sqlite3", "/app/store.db")
-	defer db.Close()
-
-	db.Exec(`
+	Pool.Exec(`
 		INSERT INTO Events (
     		previewPhoto, nameRu, nameEn, nameKz, descriptionRu, descriptionEn, descriptionKz, manager, developer, placeRu, placeEn, placeKz, discipline, startTime, endTime, prize) VALUES
 		(
@@ -38,10 +35,7 @@ func AddEvent(e entities.Event) {
 }
 
 func UpdateEvent(e entities.Event) {
-	db, _ := sql.Open("sqlite3", "/app/store.db")
-	defer db.Close()
-
-	_, i := db.Exec(`
+	_, i := Pool.Exec(`
 		UPDATE Events
 		SET previewPhoto = $1, 
 			nameRu = $2, 
@@ -67,10 +61,7 @@ func UpdateEvent(e entities.Event) {
 }
 
 func GetAllEvents() []entities.Event {
-	db, _ := sql.Open("sqlite3", "/app/store.db")
-	defer db.Close()
-
-	rows, _ := db.Query("SELECT * FROM Events")
+	rows, _ := Pool.Query("SELECT * FROM Events")
 	defer rows.Close()
 
 	events := []entities.Event{}
@@ -85,9 +76,6 @@ func GetAllEvents() []entities.Event {
 }
 
 func SearchEvents(query string, disciplines string, managers string, developers string, prizeMin int, prizeMax int, startTime int, endTime int) []entities.Event {
-	db, _ := sql.Open("sqlite3", "/app/store.db")
-	defer db.Close()
-
 	fmt.Println(disciplines)
 
 	disciplinesFilter := ""
@@ -147,7 +135,7 @@ func SearchEvents(query string, disciplines string, managers string, developers 
 
 	sqlQuery := fmt.Sprintf("SELECT * FROM Events %s %s;", where, sqlParams)
 
-	rows, _ := db.Query(sqlQuery)
+	rows, _ := Pool.Query(sqlQuery)
 
 	events := []entities.Event{}
 
@@ -166,10 +154,7 @@ func SearchEvents(query string, disciplines string, managers string, developers 
 }
 
 func GetEventById(id int) entities.Event {
-	db, _ := sql.Open("sqlite3", "/app/store.db")
-	defer db.Close()
-
-	row := db.QueryRow("SELECT * FROM Events WHERE id = $1", id)
+	row := Pool.QueryRow("SELECT * FROM Events WHERE id = $1", id)
 
 	event := entities.Event{}
 	row.Scan(&event.Id, &event.PreviewPhoto, &event.Name.Ru, &event.Name.En, &event.Name.Kz, &event.Description.Ru, &event.Description.En, &event.Description.Kz, &event.Manager, &event.Developer, &event.Place.Ru, &event.Place.En, &event.Place.Kz, &event.Discipline, &event.StartTime, &event.EndTime, &event.Prize)
@@ -178,11 +163,7 @@ func GetEventById(id int) entities.Event {
 }
 
 func RemoveEvent(id int) {
-	db, _ := sql.Open("sqlite3", "/app/store.db")
-
-	defer db.Close()
-
-	db.Exec("DELETE FROM Events WHERE id = $1", id)
+	Pool.Exec("DELETE FROM Events WHERE id = $1", id)
 }
 
 // func GetFilters() []byte {
@@ -240,17 +221,7 @@ func RemoveEvent(id int) {
 //		return jsonData
 //	}
 func GetFilters() []byte {
-	// Открываем соединение с базой данных
-	db, err := sql.Open("sqlite3", "/app/store.db")
-	if err != nil {
-		log.Printf("ERROR: Failed to open database: %v", err)
-		return getEmptyFiltersJson()
-	}
-	defer func() {
-		if closeErr := db.Close(); closeErr != nil {
-			log.Printf("WARNING: Failed to close database connection: %v", closeErr)
-		}
-	}()
+	db := Pool
 
 	// Проверяем соединение с базой
 	if err := db.Ping(); err != nil {
@@ -352,16 +323,11 @@ func getEmptyFiltersJson() []byte {
 
 // Дополнительная функция для проверки состояния базы (можно вызвать при инициализации)
 func CheckDatabaseState() {
-	db, err := sql.Open("sqlite3", "/app/store.db")
-	if err != nil {
-		log.Printf("DATABASE CHECK: Failed to open database: %v", err)
-		return
-	}
-	defer db.Close()
+	db := Pool
 
 	// Проверяем существование таблицы
 	var tableName string
-	err = db.QueryRow("SELECT name FROM sqlite_master WHERE type='table' AND name='Events'").Scan(&tableName)
+	err := db.QueryRow("SELECT name FROM sqlite_master WHERE type='table' AND name='Events'").Scan(&tableName)
 	if err != nil {
 		log.Printf("DATABASE CHECK: Events table does not exist or is empty: %v", err)
 		return

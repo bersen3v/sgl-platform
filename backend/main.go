@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 	eventApi "sgl-rights/api/event"
 	photoApi "sgl-rights/api/photo"
@@ -15,7 +16,13 @@ import (
 
 func main() {
 	fmt.Println("Starting server on :8000...")
+
+	db.InitPool("/app/store.db")
+	defer db.Pool.Close()
+
 	db.CreateDb()
+
+	log.Println("Database initialized with connection pool (WAL mode, busy_timeout=5000ms)")
 
 	mux := http.NewServeMux()
 
@@ -40,7 +47,7 @@ func main() {
 	mux.HandleFunc("/getAllSales", saleApi.GetAllSales)
 
 	c := cors.New(cors.Options{
-		AllowedOrigins:   []string{"*"}, // Разрешить все origins
+		AllowedOrigins:   []string{"*"},
 		AllowedMethods:   []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
 		AllowedHeaders:   []string{"*"},
 		AllowCredentials: true,
@@ -51,7 +58,3 @@ func main() {
 	http.Handle("/", corsHandler)
 	http.ListenAndServe("0.0.0.0:8000", nil)
 }
-
-// func main() {
-// 	fmt.Println(db.GetAllEvents())
-// }

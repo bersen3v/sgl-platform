@@ -1,15 +1,11 @@
 package db
 
 import (
-	"database/sql"
 	"sgl-rights/entities"
 )
 
 func GetAllSales() []entities.Sale {
-	db, _ := sql.Open("sqlite3", "/app/store.db")
-	defer db.Close()
-
-	rows, _ := db.Query(`
+	rows, _ := Pool.Query(`
 		SELECT * FROM Sales
 	`)
 	defer rows.Close()
